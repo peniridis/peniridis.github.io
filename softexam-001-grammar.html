@@ -129,7 +129,7 @@
 <meta property="og:site_name" content="Winter Coderʕ•͓͡•͡ʔ">
 <meta property="og:description" content="记录编译原理中文法的知识点编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-15T14:55:01.000Z">
+<meta property="og:updated_time" content="2018-09-15T14:59:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="软考（一）：文法">
 <meta name="twitter:description" content="记录编译原理中文法的知识点编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。">
@@ -678,7 +678,7 @@
 <p>判断上面推导式中满足什么类型的文法</p>
 </blockquote>
 <p>首先要判断哪些是==终结符和非终结符==,简单来讲终结符就是终结的,最小的不可拆分的元素,而不是终结符的都是非终结符.这个应该是没有任何问题的,所以上题中,的非终结符就是AB,其他都是非终结符.而0型文法中,讲到只需要在p中至少有一个非终结符,也就是在推导式的左边至少存在一个非终结符就可以了.这样一来,我们看到在等式的左边,两个都是非终结符.肯定满足0型文法,下面就是1型文法了,1型文法是怎么规定的呢?在0型文法的基础上,推导式的==左边的长度肯定小于或者等于右边的长度==,题中p集合里面左边的长度都小于右边的长度,所以肯定符合1型文法;接下来就是看看是否满足2型文法了.2型文法是怎么来限定的呢？在1型文法的基础上，在推导式的==左边每个都是非终结符==，如题，每个推导式的左边都是非终结符，所以肯定是2型文法了；3型文法的意思就是2型文法的基础上，看看是否满足右线性或者左线性，我们将这个推导式分开来判断。A–&gt;a或者A—&gt;aB，第一个拆开的推导式是右线性，而B—&gt;A是左线性的，3型文法是怎么规定的呢？是符合==左线性或者右线性==。</p>
-<h3 id="实例2"><a href="#实例2" class="headerlink" title="实例2"></a>实例2</h3><p>$$<br>\begin{align<em>}<br>&amp;{文法}: G: S-&gt;xSx | y所识别的语言是（）。\<br>&amp;A. xyx\<br>&amp;B. (xyz)^</em>\<br>&amp;C. x^<em>yx^</em>\<br>&amp;D. x^nyx^n(n\geq0)\<br>\end{align*}<br>$$</p>
+<h3 id="实例2"><a href="#实例2" class="headerlink" title="实例2"></a>实例2</h3><p>$$\begin{align<em>}<br>&amp;{文法}: G: S-&gt;xSx | y{所识别的语言是}（）。\<br>&amp;A. xyx\<br>&amp;B. (xyz)^</em>\<br>&amp;C. x^<em>yx^</em>\<br>&amp;D. x^nyx^n(n\geq0)\<br>\end{align*}$$</p>
 <p>解析：D。<br><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="65.224ex" height="2.676ex" style="vertical-align: -0.671ex;" viewBox="0 -863.1 28082.3 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-9-Title">
 <title id="MathJax-SVG-9-Title">S-&gt;xSx-&gt;xxSxx-&gt;x…S…x-&gt;x…y…x-&gt;x^nyx^n</title>
 <defs aria-hidden="true">
