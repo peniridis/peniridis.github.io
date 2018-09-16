@@ -138,7 +138,7 @@
 <meta property="og:site_name" content="Winter Coderʕ•͓͡•͡ʔ">
 <meta property="og:description" content="记录编译原理中文法的知识点编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-16T01:02:02.000Z">
+<meta property="og:updated_time" content="2018-09-16T02:23:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="软考（一）：文法">
 <meta name="twitter:description" content="记录编译原理中文法的知识点编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。">
@@ -401,7 +401,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.7k
+                  1.9k
                 </span>
               
 
@@ -417,7 +417,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  7
                 </span>
               
             </div>
@@ -509,7 +509,19 @@ A->\varepsilon|aB,B->Ab|a</script><blockquote>
 <h3 id="实例3"><a href="#实例3" class="headerlink" title="实例3"></a>实例3</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定文法A-&gt;<span class="keyword">bA|ca,该文法的句子是：</span></span><br><span class="line"><span class="keyword">A. </span><span class="keyword">bba</span></span><br><span class="line"><span class="keyword">B. </span>cab</span><br><span class="line"><span class="symbol">C.</span> <span class="keyword">bca</span></span><br><span class="line"><span class="keyword">D. </span>cba</span><br></pre></td></tr></table></figure>
 <p>解析：C。A-&gt;bA-&gt;bca。第二次替换A的时候，使用候选式A-&gt;ca 即可。</p>
 <h3 id="实例4"><a href="#实例4" class="headerlink" title="实例4"></a>实例4</h3><script type="math/tex; mode=display">
-对于\\</script>
+\begin{gather}
+&\text{对于一下编号为①，②，③的正则式，正确的说法是___。}\\
+&\text{①}(aa^*|ab)^b  \qquad\qquad\qquad \text{②}(a|b)^b \qquad\qquad\qquad \text{③}((a|b)^*|aa)^b \\
+\qquad \\
+&A. \text{正则式①，②等价} \qquad B. \text{正则式①，③等价}\\
+&C. \text{正则式②，③等价} \qquad D. \text{正则式①，②，③互不等价}
+\end{gather}</script><p>解析：C。①中任意个前始终有b，②中为任意个a或b，故①②不等价，③中包含②并且任意长度a和故b组成的串，aa限制条件不是必要条件故②③等价。</p>
+<h3 id="实例5"><a href="#实例5" class="headerlink" title="实例5"></a>实例5</h3><script type="math/tex; mode=display">
+\begin{gather}
+&\text{语言}L=\{a^mb^n|m\geq0,n\geq1\} \text{的正规表达式是_____。}\\
+&A. a^*bb^* \qquad B. aa^*bb^* \qquad C. aa^*b^* \qquad D. a^*b^* 
+\end{gather}</script><p>解析：A。\(a^<em>\)代表若干个a包括零个a，\(b^</em>b\)表示至少一个b。</p>
+
       
     </div>
     
@@ -530,7 +542,7 @@ A->\varepsilon|aB,B->Ab|a</script><blockquote>
   <p><span>本文标题:</span><a href="/softexam-001-grammar.html">软考（一）：文法</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 一打鹏 的个人博客">一打鹏</a></p>
   <p><span>发布时间:</span>2018年09月15日 - 20:09</p>
-  <p><span>最后更新:</span>2018年09月16日 - 09:09</p>
+  <p><span>最后更新:</span>2018年09月16日 - 10:09</p>
   <p><span>原始链接:</span><a href="/softexam-001-grammar.html" title="软考（一）：文法">https://peniridis.github.io/softexam-001-grammar.html</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://peniridis.github.io/softexam-001-grammar.html"  aria-label="复制成功！"></i></span>
   </p>
@@ -791,7 +803,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#终结符和非终结符"><span class="nav-number">2.</span> <span class="nav-text">终结符和非终结符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类"><span class="nav-number">3.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0型文法"><span class="nav-number">3.1.</span> <span class="nav-text">0型文法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1型文法（上下文有关文法）"><span class="nav-number">3.2.</span> <span class="nav-text">1型文法（上下文有关文法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2型文法（上下文无关文法）"><span class="nav-number">3.3.</span> <span class="nav-text">2型文法（上下文无关文法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3型文法（正规文法）"><span class="nav-number">3.4.</span> <span class="nav-text">3型文法（正规文法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种文法关系"><span class="nav-number">3.5.</span> <span class="nav-text">三种文法关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正规式"><span class="nav-number">4.</span> <span class="nav-text">正规式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例"><span class="nav-number">5.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实例1"><span class="nav-number">5.1.</span> <span class="nav-text">实例1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例2"><span class="nav-number">5.2.</span> <span class="nav-text">实例2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例3"><span class="nav-number">5.3.</span> <span class="nav-text">实例3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例4"><span class="nav-number">5.4.</span> <span class="nav-text">实例4</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#终结符和非终结符"><span class="nav-number">2.</span> <span class="nav-text">终结符和非终结符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类"><span class="nav-number">3.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0型文法"><span class="nav-number">3.1.</span> <span class="nav-text">0型文法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1型文法（上下文有关文法）"><span class="nav-number">3.2.</span> <span class="nav-text">1型文法（上下文有关文法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2型文法（上下文无关文法）"><span class="nav-number">3.3.</span> <span class="nav-text">2型文法（上下文无关文法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3型文法（正规文法）"><span class="nav-number">3.4.</span> <span class="nav-text">3型文法（正规文法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种文法关系"><span class="nav-number">3.5.</span> <span class="nav-text">三种文法关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正规式"><span class="nav-number">4.</span> <span class="nav-text">正规式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例"><span class="nav-number">5.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实例1"><span class="nav-number">5.1.</span> <span class="nav-text">实例1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例2"><span class="nav-number">5.2.</span> <span class="nav-text">实例2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例3"><span class="nav-number">5.3.</span> <span class="nav-text">实例3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例4"><span class="nav-number">5.4.</span> <span class="nav-text">实例4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例5"><span class="nav-number">5.5.</span> <span class="nav-text">实例5</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -841,7 +853,7 @@ show_date_time();
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共3.5k字</span>
+  <span class="post-count">博客全站共3.6k字</span>
 </div>
         
 <div class="busuanzi-count">
