@@ -1,7 +1,15 @@
-<!DOCTYPE html><html class="theme-next muse use-motion" lang="zh-Hans"><head>
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#fff">
 
 
@@ -23,8 +31,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
 
@@ -43,7 +51,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -51,23 +59,11 @@
   
   
   
-  
-
-  
-    
-    
   
 
   
     
-      
     
-
-    
-  
-
-  
-
   
 
   
@@ -79,9 +75,21 @@
   
 
   
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
     
     
-    <link href="https://fonts.cat.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.cat.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -91,9 +99,9 @@
 
   
 
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -111,7 +119,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, Blog，Python">
+  <meta name="keywords" content="Hexo, Blog，Python" />
 
 
 
@@ -167,13 +175,13 @@
 
 
 
-  <link rel="canonical" href="https://peniridis.github.io/python-001-scrapy-cluster.html">
+  <link rel="canonical" href="https://peniridis.github.io/python-001-scrapy-cluster.html"/>
 
 
 
 
 
-  <title>Scrapy-cluster分布式爬虫 | Winter Coderʕ•͓͡•͡ʔ</title>
+  <title>Scrapy-cluster分布式爬虫 | Winter Coderʕ•͓͡•͡ʔ</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -185,23 +193,23 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
+      <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Winter Coderʕ•͓͡•͡ʔ</span>
         <span class="logo-line-after"><i></i></span>
@@ -231,7 +239,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -241,7 +249,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -254,7 +262,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             搜索
           </a>
@@ -275,7 +283,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -307,20 +317,20 @@
   
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://peniridis.github.io/python-001-scrapy-cluster.html">
 
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="一打鹏">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/ajie.jpg">
     </span>
 
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Winter Coderʕ•͓͡•͡ʔ">
     </span>
 
@@ -361,7 +371,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/python-001-scrapy-cluster.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="python-001-scrapy-cluster.html" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="python-001-scrapy-cluster.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -375,7 +386,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数:</span>
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -391,7 +402,7 @@
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计:</span>
+                  <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
                   1.6k
@@ -407,7 +418,7 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
                   8
@@ -459,101 +470,101 @@
 </tbody>
 </table>
 </div>
-<figure class="highlight routeros"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cat /etc/redhat-release </span></span><br><span class="line">CentOS Linux release 7.4.1708 (Core) </span><br><span class="line"><span class="comment"># python -V</span></span><br><span class="line">Python 2.7.5</span><br><span class="line"><span class="comment"># java -version</span></span><br><span class="line">openjdk version <span class="string">"1.8.0_181"</span></span><br><span class="line">OpenJDK Runtime Environment (build 1.8.0_181-b13)</span><br><span class="line">OpenJDK 64-Bit<span class="built_in"> Server </span>VM (build 25.181-b13, mixed mode)</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cat /etc/redhat-release </span></span><br><span class="line">CentOS Linux release 7.4.1708 (Core) </span><br><span class="line"><span class="comment"># python -V</span></span><br><span class="line">Python 2.7.5</span><br><span class="line"><span class="comment"># java -version</span></span><br><span class="line">openjdk version <span class="string">"1.8.0_181"</span></span><br><span class="line">OpenJDK Runtime Environment (build 1.8.0_181-b13)</span><br><span class="line">OpenJDK 64-Bit<span class="built_in"> Server </span>VM (build 25.181-b13, mixed mode)</span><br></pre></td></tr></table></figure>
 <h2 id="Zookeeper-单机配置"><a href="#Zookeeper-单机配置" class="headerlink" title="Zookeeper 单机配置"></a>Zookeeper 单机配置</h2><ul>
 <li>下载并配置</li>
 </ul>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> wget http://mirror.bit.edu.cn/apache/zookeeper/zookeeper-3.4.13/zookeeper-3.4.13.tar.gz</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> tar -zxvf zookeeper-3.4.13.tar.gz</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">cd</span> zookeeper-3.4.13/conf</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> cp zoo_sample.cfg zoo.cfg</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">cd</span> ..</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> PATH=/opt/zookeeper-3.4.13/bin:<span class="variable">$PATH</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">echo</span> <span class="string">'export PATH=/opt/zookeeper-3.4.13/bin:$PATH'</span> &gt; /etc/profile.d/zoo.sh</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> wget http://mirror.bit.edu.cn/apache/zookeeper/zookeeper-3.4.13/zookeeper-3.4.13.tar.gz</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> tar -zxvf zookeeper-3.4.13.tar.gz</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">cd</span> zookeeper-3.4.13/conf</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> cp zoo_sample.cfg zoo.cfg</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">cd</span> ..</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> PATH=/opt/zookeeper-3.4.13/bin:<span class="variable">$PATH</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">echo</span> <span class="string">'export PATH=/opt/zookeeper-3.4.13/bin:$PATH'</span> &gt; /etc/profile.d/zoo.sh</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>单节点启动</li>
 </ul>
-<figure class="highlight routeros"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># zkServer.sh status</span></span><br><span class="line">ZooKeeper JMX enabled by default</span><br><span class="line">Using config: /opt/zookeeper-3.4.13/bin/<span class="built_in">..</span>/conf/zoo.cfg</span><br><span class="line"><span class="builtin-name">Error</span> contacting service. It is probably <span class="keyword">not</span> running.</span><br><span class="line"></span><br><span class="line"><span class="comment"># zkServer.sh start</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># zkServer.sh status</span></span><br><span class="line">ZooKeeper JMX enabled by default</span><br><span class="line">Using config: /opt/zookeeper-3.4.13/bin/<span class="built_in">..</span>/conf/zoo.cfg</span><br><span class="line"><span class="builtin-name">Error</span> contacting service. It is probably <span class="keyword">not</span> running.</span><br><span class="line"></span><br><span class="line"><span class="comment"># zkServer.sh start</span></span><br></pre></td></tr></table></figure>
 <h2 id="kafka-单机配置"><a href="#kafka-单机配置" class="headerlink" title="kafka 单机配置"></a>kafka 单机配置</h2><ul>
 <li>下载</li>
 </ul>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> wget http://mirrors.hust.edu.cn/apache/kafka/2.0.0/kafka_2.12-2.0.0.tgz</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> tar -zxvf kafka_2.12-2.0.0.tgz</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">cd</span> kafka_2.12-2.0.0/</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> wget http://mirrors.hust.edu.cn/apache/kafka/2.0.0/kafka_2.12-2.0.0.tgz</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> tar -zxvf kafka_2.12-2.0.0.tgz</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">cd</span> kafka_2.12-2.0.0/</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>配置</li>
 </ul>
-<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vim config/server.properties</span></span><br><span class="line"></span><br><span class="line"><span class="comment">############################# Server Basics #############################</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># The id of the broker. This must be set to a unique integer for each broker.</span></span><br><span class="line">broker.id=0                     <span class="comment"># kafka的机器编号，</span></span><br><span class="line">host.name = 168.*.*.119         <span class="comment"># 绑定ip</span></span><br><span class="line">port=9092                        <span class="comment"># 默认端口9092，</span></span><br><span class="line"><span class="comment"># Switch to enable topic deletion or not, default value is false</span></span><br><span class="line">delete.topic.enable=<span class="literal">true</span></span><br><span class="line"><span class="comment">############################# Zookeeper #############################</span></span><br><span class="line">zookeeper.connect=localhost:2181</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vim config/server.properties</span></span><br><span class="line"></span><br><span class="line"><span class="comment">############################# Server Basics #############################</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># The id of the broker. This must be set to a unique integer for each broker.</span></span><br><span class="line">broker.id=0                     <span class="comment"># kafka的机器编号，</span></span><br><span class="line">host.name = 168.*.*.119         <span class="comment"># 绑定ip</span></span><br><span class="line">port=9092                        <span class="comment"># 默认端口9092，</span></span><br><span class="line"><span class="comment"># Switch to enable topic deletion or not, default value is false</span></span><br><span class="line">delete.topic.enable=<span class="literal">true</span></span><br><span class="line"><span class="comment">############################# Zookeeper #############################</span></span><br><span class="line">zookeeper.connect=localhost:2181</span><br></pre></td></tr></table></figure>
 <ul>
 <li>启动</li>
 </ul>
-<figure class="highlight stylus"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup bin/kafka-server-start<span class="selector-class">.sh</span> config/server<span class="selector-class">.properties</span> &amp;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup bin/kafka-server-start<span class="selector-class">.sh</span> config/server<span class="selector-class">.properties</span> &amp;</span><br></pre></td></tr></table></figure>
 <p>停止命令<code>bin/kafka-server-stop.sh config/server.properties</code></p>
 <h2 id="redis-单机配置"><a href="#redis-单机配置" class="headerlink" title="redis 单机配置"></a>redis 单机配置</h2><ul>
 <li>安装配置</li>
 </ul>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> yum -y install redis</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> vim /etc/redis.conf</span></span><br><span class="line">bind 168.*.*.119</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> yum -y install redis</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> vim /etc/redis.conf</span></span><br><span class="line">bind 168.*.*.119</span><br></pre></td></tr></table></figure>
 <ul>
 <li>启动</li>
 </ul>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> systemctl start redis.service</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="scrapy-cluster-单机配置"><a href="#scrapy-cluster-单机配置" class="headerlink" title="scrapy-cluster 单机配置"></a>scrapy-cluster 单机配置</h2><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/istresearch/scrapy-cluster.git</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">cd</span> scrapy-cluster</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> pip install -r requirements.txt</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> systemctl start redis.service</span></span><br></pre></td></tr></table></figure>
+<h2 id="scrapy-cluster-单机配置"><a href="#scrapy-cluster-单机配置" class="headerlink" title="scrapy-cluster 单机配置"></a>scrapy-cluster 单机配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/istresearch/scrapy-cluster.git</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">cd</span> scrapy-cluster</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> pip install -r requirements.txt</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>离线运行单元测试,以确保一切似乎正常</li>
 </ul>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> ./run_offline_tests.sh</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> ./run_offline_tests.sh</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>修改配置</li>
 </ul>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> vim kafka-monitor/settings.py</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> vim redis-monitor/settings.py</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> vim crawlers/crawling/settings.py</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> vim kafka-monitor/settings.py</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> vim redis-monitor/settings.py</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> vim crawlers/crawling/settings.py</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>修改以下</li>
 </ul>
-<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Redis host configuration</span></span><br><span class="line"><span class="attr">REDIS_HOST</span> = <span class="string">'168.*.*.119'</span></span><br><span class="line"><span class="attr">REDIS_PORT</span> = <span class="number">6379</span></span><br><span class="line"><span class="attr">REDIS_DB</span> = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="attr">KAFKA_HOSTS</span> = <span class="string">'168.*.*.119:9092'</span></span><br><span class="line"><span class="attr">KAFKA_TOPIC_PREFIX</span> = <span class="string">'demo'</span></span><br><span class="line"><span class="attr">KAFKA_CONN_TIMEOUT</span> = <span class="number">5</span></span><br><span class="line"><span class="attr">KAFKA_APPID_TOPICS</span> = <span class="literal">False</span></span><br><span class="line"><span class="attr">KAFKA_PRODUCER_BATCH_LINGER_MS</span> = <span class="number">25</span>  # <span class="number">25</span> ms before flush</span><br><span class="line"><span class="attr">KAFKA_PRODUCER_BUFFER_BYTES</span> = <span class="number">4</span> * <span class="number">1024</span> * <span class="number">1024</span>  # <span class="number">4</span>MB before blocking</span><br><span class="line"></span><br><span class="line"><span class="comment"># Zookeeper Settings</span></span><br><span class="line"><span class="attr">ZOOKEEPER_ASSIGN_PATH</span> = <span class="string">'/scrapy-cluster/crawler/'</span></span><br><span class="line"><span class="attr">ZOOKEEPER_ID</span> = <span class="string">'all'</span></span><br><span class="line"><span class="attr">ZOOKEEPER_HOSTS</span> = <span class="string">'168.*.*.119:2181'</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Redis host configuration</span></span><br><span class="line"><span class="attr">REDIS_HOST</span> = <span class="string">'168.*.*.119'</span></span><br><span class="line"><span class="attr">REDIS_PORT</span> = <span class="number">6379</span></span><br><span class="line"><span class="attr">REDIS_DB</span> = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="attr">KAFKA_HOSTS</span> = <span class="string">'168.*.*.119:9092'</span></span><br><span class="line"><span class="attr">KAFKA_TOPIC_PREFIX</span> = <span class="string">'demo'</span></span><br><span class="line"><span class="attr">KAFKA_CONN_TIMEOUT</span> = <span class="number">5</span></span><br><span class="line"><span class="attr">KAFKA_APPID_TOPICS</span> = <span class="literal">False</span></span><br><span class="line"><span class="attr">KAFKA_PRODUCER_BATCH_LINGER_MS</span> = <span class="number">25</span>  # <span class="number">25</span> ms before flush</span><br><span class="line"><span class="attr">KAFKA_PRODUCER_BUFFER_BYTES</span> = <span class="number">4</span> * <span class="number">1024</span> * <span class="number">1024</span>  # <span class="number">4</span>MB before blocking</span><br><span class="line"></span><br><span class="line"><span class="comment"># Zookeeper Settings</span></span><br><span class="line"><span class="attr">ZOOKEEPER_ASSIGN_PATH</span> = <span class="string">'/scrapy-cluster/crawler/'</span></span><br><span class="line"><span class="attr">ZOOKEEPER_ID</span> = <span class="string">'all'</span></span><br><span class="line"><span class="attr">ZOOKEEPER_HOSTS</span> = <span class="string">'168.*.*.119:2181'</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>启动监听</li>
 </ul>
-<figure class="highlight mel"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># nohup <span class="keyword">python</span> kafka_monitor.py run &gt;&gt; /root/scrapy-<span class="keyword">cluster</span>/kafka-monitor/kafka_monitor.<span class="keyword">log</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span> &amp;</span><br><span class="line"># nohup <span class="keyword">python</span> redis_monitor.py &gt;&gt; /root/scrapy-<span class="keyword">cluster</span>/redis-monitor/redis_monitor.<span class="keyword">log</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span> &amp;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># nohup <span class="keyword">python</span> kafka_monitor.py run &gt;&gt; /root/scrapy-<span class="keyword">cluster</span>/kafka-monitor/kafka_monitor.<span class="keyword">log</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span> &amp;</span><br><span class="line"># nohup <span class="keyword">python</span> redis_monitor.py &gt;&gt; /root/scrapy-<span class="keyword">cluster</span>/redis-monitor/redis_monitor.<span class="keyword">log</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span> &amp;</span><br></pre></td></tr></table></figure>
 <h2 id="scrapyd-爬虫管理工具配置"><a href="#scrapyd-爬虫管理工具配置" class="headerlink" title="scrapyd 爬虫管理工具配置"></a>scrapyd 爬虫管理工具配置</h2><ul>
 <li>安装</li>
 </ul>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> pip install scrapyd</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> pip install scrapyd</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>配置</li>
 </ul>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> sudo mkdir /etc/scrapyd</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> sudo vi /etc/scrapyd/scrapyd.conf</span></span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight stylus"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">[scrapyd]</span><br><span class="line">eggs_dir    = eggs</span><br><span class="line">logs_dir    = logs</span><br><span class="line">items_dir   =</span><br><span class="line">jobs_to_keep = <span class="number">5</span></span><br><span class="line">dbs_dir     = dbs</span><br><span class="line">max_proc    = <span class="number">0</span></span><br><span class="line">max_proc_per_cpu = <span class="number">10</span></span><br><span class="line">finished_to_keep = <span class="number">100</span></span><br><span class="line">poll_interval = <span class="number">5.0</span></span><br><span class="line">bind_address = <span class="number">0.0</span>.<span class="number">0.0</span></span><br><span class="line">http_port   = <span class="number">6800</span></span><br><span class="line">debug       = off</span><br><span class="line">runner      = scrapyd.runner</span><br><span class="line">application = scrapyd<span class="selector-class">.app</span><span class="selector-class">.application</span></span><br><span class="line">launcher    = scrapyd<span class="selector-class">.launcher</span><span class="selector-class">.Launcher</span></span><br><span class="line">webroot     = scrapyd<span class="selector-class">.website</span><span class="selector-class">.Root</span></span><br><span class="line"></span><br><span class="line">[services]</span><br><span class="line">schedule<span class="selector-class">.json</span>     = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.Schedule</span></span><br><span class="line">cancel<span class="selector-class">.json</span>       = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.Cancel</span></span><br><span class="line">addversion<span class="selector-class">.json</span>   = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.AddVersion</span></span><br><span class="line">listprojects<span class="selector-class">.json</span> = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.ListProjects</span></span><br><span class="line">listversions<span class="selector-class">.json</span> = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.ListVersions</span></span><br><span class="line">listspiders<span class="selector-class">.json</span>  = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.ListSpiders</span></span><br><span class="line">delproject<span class="selector-class">.json</span>   = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.DeleteProject</span></span><br><span class="line">delversion<span class="selector-class">.json</span>   = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.DeleteVersion</span></span><br><span class="line">listjobs<span class="selector-class">.json</span>     = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.ListJobs</span></span><br><span class="line">daemonstatus<span class="selector-class">.json</span> = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.DaemonStatus</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> sudo mkdir /etc/scrapyd</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> sudo vi /etc/scrapyd/scrapyd.conf</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">[scrapyd]</span><br><span class="line">eggs_dir    = eggs</span><br><span class="line">logs_dir    = logs</span><br><span class="line">items_dir   =</span><br><span class="line">jobs_to_keep = <span class="number">5</span></span><br><span class="line">dbs_dir     = dbs</span><br><span class="line">max_proc    = <span class="number">0</span></span><br><span class="line">max_proc_per_cpu = <span class="number">10</span></span><br><span class="line">finished_to_keep = <span class="number">100</span></span><br><span class="line">poll_interval = <span class="number">5.0</span></span><br><span class="line">bind_address = <span class="number">0.0</span>.<span class="number">0.0</span></span><br><span class="line">http_port   = <span class="number">6800</span></span><br><span class="line">debug       = off</span><br><span class="line">runner      = scrapyd.runner</span><br><span class="line">application = scrapyd<span class="selector-class">.app</span><span class="selector-class">.application</span></span><br><span class="line">launcher    = scrapyd<span class="selector-class">.launcher</span><span class="selector-class">.Launcher</span></span><br><span class="line">webroot     = scrapyd<span class="selector-class">.website</span><span class="selector-class">.Root</span></span><br><span class="line"></span><br><span class="line">[services]</span><br><span class="line">schedule<span class="selector-class">.json</span>     = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.Schedule</span></span><br><span class="line">cancel<span class="selector-class">.json</span>       = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.Cancel</span></span><br><span class="line">addversion<span class="selector-class">.json</span>   = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.AddVersion</span></span><br><span class="line">listprojects<span class="selector-class">.json</span> = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.ListProjects</span></span><br><span class="line">listversions<span class="selector-class">.json</span> = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.ListVersions</span></span><br><span class="line">listspiders<span class="selector-class">.json</span>  = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.ListSpiders</span></span><br><span class="line">delproject<span class="selector-class">.json</span>   = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.DeleteProject</span></span><br><span class="line">delversion<span class="selector-class">.json</span>   = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.DeleteVersion</span></span><br><span class="line">listjobs<span class="selector-class">.json</span>     = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.ListJobs</span></span><br><span class="line">daemonstatus<span class="selector-class">.json</span> = scrapyd<span class="selector-class">.webservice</span><span class="selector-class">.DaemonStatus</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>启动</li>
 </ul>
-<figure class="highlight lsl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># nohup scrapyd &gt;&gt; /root/scrapy-cluster/scrapyd.log <span class="number">2</span>&gt;&amp;<span class="number">1</span> &amp;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># nohup scrapyd &gt;&gt; /root/scrapy-cluster/scrapyd.log <span class="number">2</span>&gt;&amp;<span class="number">1</span> &amp;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>建议做Nginx反向代理</p>
 </blockquote>
 <ul>
 <li><strong><em>启动异常</em></strong></li>
 </ul>
-<figure class="highlight arduino"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">File</span> <span class="string">"/usr/local/lib/python3.6/site-packages/scrapyd-1.2.0-py3.6.egg/scrapyd/app.py"</span>, <span class="built_in">line</span> <span class="number">2</span>, in &lt;<span class="keyword">module</span>&gt;</span><br><span class="line">from twisted.application.internet <span class="keyword">import</span> TimerService, TCPServer</span><br><span class="line"><span class="built_in">File</span> <span class="string">"/usr/local/lib64/python3.6/site-packages/twisted/application/internet.py"</span>, <span class="built_in">line</span> <span class="number">54</span>, in &lt;<span class="keyword">module</span>&gt;</span><br><span class="line">from automat <span class="keyword">import</span> MethodicalMachine</span><br><span class="line"><span class="built_in">File</span> <span class="string">"/usr/local/lib/python3.6/site-packages/automat/__init__.py"</span>, <span class="built_in">line</span> <span class="number">2</span>, in &lt;<span class="keyword">module</span>&gt;</span><br><span class="line">from ._methodical <span class="keyword">import</span> MethodicalMachine</span><br><span class="line"><span class="built_in">File</span> <span class="string">"/usr/local/lib/python3.6/site-packages/automat/_methodical.py"</span>, <span class="built_in">line</span> <span class="number">210</span>, in &lt;<span class="keyword">module</span>&gt;</span><br><span class="line">    class MethodicalInput(object):</span><br><span class="line"><span class="built_in">File</span> <span class="string">"/usr/local/lib/python3.6/site-packages/automat/_methodical.py"</span>, <span class="built_in">line</span> <span class="number">220</span>, in MethodicalInput</span><br><span class="line">    @argSpec.<span class="built_in">default</span></span><br><span class="line">builtins.TypeError: <span class="string">'_Nothing'</span> object is <span class="keyword">not</span> callable</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Failed to load application: <span class="string">'_Nothing'</span> object is <span class="keyword">not</span> callable</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">File</span> <span class="string">"/usr/local/lib/python3.6/site-packages/scrapyd-1.2.0-py3.6.egg/scrapyd/app.py"</span>, <span class="built_in">line</span> <span class="number">2</span>, in &lt;<span class="keyword">module</span>&gt;</span><br><span class="line">from twisted.application.internet <span class="keyword">import</span> TimerService, TCPServer</span><br><span class="line"><span class="built_in">File</span> <span class="string">"/usr/local/lib64/python3.6/site-packages/twisted/application/internet.py"</span>, <span class="built_in">line</span> <span class="number">54</span>, in &lt;<span class="keyword">module</span>&gt;</span><br><span class="line">from automat <span class="keyword">import</span> MethodicalMachine</span><br><span class="line"><span class="built_in">File</span> <span class="string">"/usr/local/lib/python3.6/site-packages/automat/__init__.py"</span>, <span class="built_in">line</span> <span class="number">2</span>, in &lt;<span class="keyword">module</span>&gt;</span><br><span class="line">from ._methodical <span class="keyword">import</span> MethodicalMachine</span><br><span class="line"><span class="built_in">File</span> <span class="string">"/usr/local/lib/python3.6/site-packages/automat/_methodical.py"</span>, <span class="built_in">line</span> <span class="number">210</span>, in &lt;<span class="keyword">module</span>&gt;</span><br><span class="line">    class MethodicalInput(object):</span><br><span class="line"><span class="built_in">File</span> <span class="string">"/usr/local/lib/python3.6/site-packages/automat/_methodical.py"</span>, <span class="built_in">line</span> <span class="number">220</span>, in MethodicalInput</span><br><span class="line">    @argSpec.<span class="built_in">default</span></span><br><span class="line">builtins.TypeError: <span class="string">'_Nothing'</span> object is <span class="keyword">not</span> callable</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Failed to load application: <span class="string">'_Nothing'</span> object is <span class="keyword">not</span> callable</span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong><em>解决：Automat降级</em></strong></li>
 </ul>
-<figure class="highlight lsl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install Automat==<span class="number">0.6</span><span class="number">.0</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install Automat==<span class="number">0.6</span><span class="number">.0</span></span><br></pre></td></tr></table></figure>
 <h2 id="Spiderkeeper-爬虫管理界面配置"><a href="#Spiderkeeper-爬虫管理界面配置" class="headerlink" title="Spiderkeeper 爬虫管理界面配置"></a>Spiderkeeper 爬虫管理界面配置</h2><ul>
 <li>安装</li>
 </ul>
-<figure class="highlight cmake"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> SpiderKeeper</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> SpiderKeeper</span><br></pre></td></tr></table></figure>
 <ul>
 <li>启动</li>
 </ul>
-<figure class="highlight jboss-cli"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir <span class="string">/root/spiderkeeper/</span></span><br><span class="line">nohup spiderkeeper <span class="params">--server=http</span>:<span class="string">//168.</span>*.*<span class="string">.118</span><span class="function">:6800</span> <span class="params">--username=admin</span> <span class="params">--password=admin</span> <span class="params">--database-url=sqlite</span>:<span class="string">////root/spiderkeeper/SpiderKeeper.db</span> &gt;&gt; <span class="string">/root/scrapy-cluster/spiderkeeper.log</span> 2&gt;&amp;1 &amp;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir <span class="string">/root/spiderkeeper/</span></span><br><span class="line">nohup spiderkeeper <span class="params">--server=http</span>:<span class="string">//168.</span>*.*<span class="string">.118</span><span class="function">:6800</span> <span class="params">--username=admin</span> <span class="params">--password=admin</span> <span class="params">--database-url=sqlite</span>:<span class="string">////root/spiderkeeper/SpiderKeeper.db</span> &gt;&gt; <span class="string">/root/scrapy-cluster/spiderkeeper.log</span> 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>浏览器访问<a href="http://168.*.*.118:5000" target="_blank" rel="noopener">http://168.*.*.118:5000</a></li>
 </ul>
 <h2 id="使用Spiderkeeper-管理爬虫"><a href="#使用Spiderkeeper-管理爬虫" class="headerlink" title="使用Spiderkeeper 管理爬虫"></a>使用Spiderkeeper 管理爬虫</h2><h3 id="使用scrapyd-deploy部署爬虫项目"><a href="#使用scrapyd-deploy部署爬虫项目" class="headerlink" title="使用scrapyd-deploy部署爬虫项目"></a>使用scrapyd-deploy部署爬虫项目</h3><ul>
 <li>修改scrapy.cfg配置</li>
 </ul>
-<figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim <span class="regexp">/root/</span>scrapy-cluster<span class="regexp">/crawler/</span>scrapy.cfg</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[settings]</span></span><br><span class="line"><span class="attr">default</span> = crawling.settings</span><br><span class="line"></span><br><span class="line"><span class="section">[deploy]</span></span><br><span class="line"><span class="attr">url</span> = http://<span class="number">168</span>.*.*.<span class="number">118</span>:<span class="number">6800</span>/</span><br><span class="line"><span class="attr">project</span> = crawling</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim <span class="regexp">/root/</span>scrapy-cluster<span class="regexp">/crawler/</span>scrapy.cfg</span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[settings]</span></span><br><span class="line"><span class="attr">default</span> = crawling.settings</span><br><span class="line"></span><br><span class="line"><span class="section">[deploy]</span></span><br><span class="line"><span class="attr">url</span> = http://<span class="number">168</span>.*.*.<span class="number">118</span>:<span class="number">6800</span>/</span><br><span class="line"><span class="attr">project</span> = crawling</span><br></pre></td></tr></table></figure>
 <ul>
 <li>添加新的spider</li>
 </ul>
-<figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd <span class="regexp">/root/</span>scrapy-cluster<span class="regexp">/crawler/</span>crawling<span class="regexp">/spider</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd <span class="regexp">/root/</span>scrapy-cluster<span class="regexp">/crawler/</span>crawling<span class="regexp">/spider</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>使用scrapyd-deploy部署项目</li>
 </ul>
-<figure class="highlight cs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># cd /root/scrapy-cluster/crawler</span></span><br><span class="line"><span class="meta"># scrapyd-deploy </span></span><br><span class="line">Packing version <span class="number">1536225989</span></span><br><span class="line">Deploying to project <span class="string">"crawling"</span> <span class="keyword">in</span> http:<span class="comment">//168.*.*.118:6800/addversion.json</span></span><br><span class="line"><span class="function">Server <span class="title">response</span> (<span class="params"><span class="number">200</span></span>):</span></span><br><span class="line"><span class="function"></span>{<span class="string">"status"</span>: <span class="string">"ok"</span>, <span class="string">"project"</span>: <span class="string">"crawling"</span>, <span class="string">"version"</span>: <span class="string">"1536225989"</span>, <span class="string">"spiders"</span>: <span class="number">3</span>, <span class="string">"node_name"</span>: <span class="string">"ambari"</span>}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># cd /root/scrapy-cluster/crawler</span></span><br><span class="line"><span class="meta"># scrapyd-deploy </span></span><br><span class="line">Packing version <span class="number">1536225989</span></span><br><span class="line">Deploying to project <span class="string">"crawling"</span> <span class="keyword">in</span> http:<span class="comment">//168.*.*.118:6800/addversion.json</span></span><br><span class="line"><span class="function">Server <span class="title">response</span> (<span class="params"><span class="number">200</span></span>):</span></span><br><span class="line"><span class="function"></span>&#123;<span class="string">"status"</span>: <span class="string">"ok"</span>, <span class="string">"project"</span>: <span class="string">"crawling"</span>, <span class="string">"version"</span>: <span class="string">"1536225989"</span>, <span class="string">"spiders"</span>: <span class="number">3</span>, <span class="string">"node_name"</span>: <span class="string">"ambari"</span>&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="spiderkeeper-配置爬虫项目"><a href="#spiderkeeper-配置爬虫项目" class="headerlink" title="spiderkeeper 配置爬虫项目"></a>spiderkeeper 配置爬虫项目</h3><ul>
 <li>登录Spiderkeeper创建项目</li>
 </ul>
@@ -563,21 +574,21 @@
 <p>Scrapy-cluster分布式爬虫，分发网址是基于IP地址。在不同的机器上启动集群，不同服务器上的每个爬虫去除队列中的所有链接。</p>
 <h3 id="部署集群中第二个scrapy-cluster"><a href="#部署集群中第二个scrapy-cluster" class="headerlink" title="部署集群中第二个scrapy-cluster"></a>部署集群中第二个scrapy-cluster</h3><p>配置一台新的服务器参照<a href="scrapy-cluster 单机配置">scrapy-cluster 单机配置</a>,同时使用第一台服务器配置<code>kafka-monitor/settings.py</code> <code>redis-monitor/settings.py</code> <code>crawling/settings.py</code></p>
 <h3 id="Current-public-ip-问题"><a href="#Current-public-ip-问题" class="headerlink" title="Current public ip 问题"></a>Current public ip 问题</h3><p>由于两台服务器同时部署在相同内网，spider运行后即获取相同<code>Current public ip</code>，导致scrapy-cluster调度器无法根据IP分发链接</p>
-<figure class="highlight groovy"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span><span class="number">-09</span><span class="number">-07</span> <span class="number">16</span>:<span class="number">08</span>:<span class="number">29</span>,<span class="number">684</span> [sc-crawler] <span class="string">DEBUG:</span> Current <span class="keyword">public</span> <span class="string">ip:</span> b<span class="string">'110.90.122.1'</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span><span class="number">-09</span><span class="number">-07</span> <span class="number">16</span>:<span class="number">08</span>:<span class="number">29</span>,<span class="number">684</span> [sc-crawler] <span class="string">DEBUG:</span> Current <span class="keyword">public</span> <span class="string">ip:</span> b<span class="string">'110.90.122.1'</span></span><br></pre></td></tr></table></figure>
 <p>参考代码<code>/root/scrapy-cluster/crawler/crawling/distributed_scheduler.py</code>第282行：</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    obj = urllib.request.urlopen(settings.get(<span class="string">'PUBLIC_IP_URL'</span>,</span><br><span class="line">                                  <span class="string">'http://ip.42.pl/raw'</span>))</span><br><span class="line">    results = self.ip_regex.findall(obj.read())</span><br><span class="line">    <span class="keyword">if</span> len(results) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="comment"># results[0] 获取IP地址即为110.90.122.1</span></span><br><span class="line">        self.my_ip = results[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">raise</span> IOError(<span class="string">"Could not get valid IP Address"</span>)</span><br><span class="line">    obj.close()</span><br><span class="line">    self.logger.debug(<span class="string">"Current public ip: {ip}"</span>.format(ip=self.my_ip))</span><br><span class="line"><span class="keyword">except</span> IOError:</span><br><span class="line">    self.logger.error(<span class="string">"Could not reach out to get public ip"</span>)</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    obj = urllib.request.urlopen(settings.get(<span class="string">'PUBLIC_IP_URL'</span>,</span><br><span class="line">                                  <span class="string">'http://ip.42.pl/raw'</span>))</span><br><span class="line">    results = self.ip_regex.findall(obj.read())</span><br><span class="line">    <span class="keyword">if</span> len(results) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="comment"># results[0] 获取IP地址即为110.90.122.1</span></span><br><span class="line">        self.my_ip = results[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">raise</span> IOError(<span class="string">"Could not get valid IP Address"</span>)</span><br><span class="line">    obj.close()</span><br><span class="line">    self.logger.debug(<span class="string">"Current public ip: &#123;ip&#125;"</span>.format(ip=self.my_ip))</span><br><span class="line"><span class="keyword">except</span> IOError:</span><br><span class="line">    self.logger.error(<span class="string">"Could not reach out to get public ip"</span>)</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
 <p>建议修改代码，获取本机IP</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">self.my_ip = [(s.connect((<span class="string">'8.8.8.8'</span>, <span class="number">53</span>)), s.getsockname()[<span class="number">0</span>], s.close()) </span><br><span class="line">                <span class="keyword">for</span> s <span class="keyword">in</span> [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][<span class="number">0</span>][<span class="number">1</span>]</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">self.my_ip = [(s.connect((<span class="string">'8.8.8.8'</span>, <span class="number">53</span>)), s.getsockname()[<span class="number">0</span>], s.close()) </span><br><span class="line">                <span class="keyword">for</span> s <span class="keyword">in</span> [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][<span class="number">0</span>][<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
 <h3 id="运行分布式爬虫"><a href="#运行分布式爬虫" class="headerlink" title="运行分布式爬虫"></a>运行分布式爬虫</h3><p>在两个scrapy-cluster中运行相同Spider</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">execute([<span class="string">'scrapy'</span>, <span class="string">'runspider'</span>, <span class="string">'crawling/spiders/link_spider.py'</span>])</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">execute([<span class="string">'scrapy'</span>, <span class="string">'runspider'</span>, <span class="string">'crawling/spiders/link_spider.py'</span>])</span><br></pre></td></tr></table></figure>
 <p>使用<code>python kafka_monitor.py feed</code>投递多个链接，使用DEBUG即可观察到链接分配情况</p>
 <h2 id="使用SpiderKeeper管理分布式爬虫"><a href="#使用SpiderKeeper管理分布式爬虫" class="headerlink" title="使用SpiderKeeper管理分布式爬虫"></a>使用SpiderKeeper管理分布式爬虫</h2><h3 id="配置scrapyd管理集群第二个scrapy-cluster"><a href="#配置scrapyd管理集群第二个scrapy-cluster" class="headerlink" title="配置scrapyd管理集群第二个scrapy-cluster"></a>配置scrapyd管理集群第二个scrapy-cluster</h3><p>在第二台scrapy-cluster服务器上安装配置scrapyd，参考<a href="scrapyd 爬虫管理工具配置">scrapyd 爬虫管理工具配置</a>并修改配置</p>
-<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[settings]</span></span><br><span class="line"><span class="attr">default</span> = crawling.settings</span><br><span class="line"></span><br><span class="line"><span class="section">[deploy]</span></span><br><span class="line"><span class="attr">url</span> = http://<span class="number">168</span>.*.*.<span class="number">119</span>:<span class="number">6800</span>/</span><br><span class="line"><span class="attr">project</span> = crawling</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[settings]</span></span><br><span class="line"><span class="attr">default</span> = crawling.settings</span><br><span class="line"></span><br><span class="line"><span class="section">[deploy]</span></span><br><span class="line"><span class="attr">url</span> = http://<span class="number">168</span>.*.*.<span class="number">119</span>:<span class="number">6800</span>/</span><br><span class="line"><span class="attr">project</span> = crawling</span><br></pre></td></tr></table></figure>
 <p>启动scrapyd后使用scrapyd-deploy工具部署两个scrapy-cluster上的爬虫项目。</p>
 <h3 id="使用Spiderkeeper连接多个scrapy-cluster"><a href="#使用Spiderkeeper连接多个scrapy-cluster" class="headerlink" title="使用Spiderkeeper连接多个scrapy-cluster"></a>使用Spiderkeeper连接多个scrapy-cluster</h3><ul>
 <li>重新启动spiderkeeper，对接两个scrapy-cluster的管理工具scrapyd。</li>
 </ul>
-<figure class="highlight jboss-cli"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup spiderkeeper <span class="params">--server=http</span>:<span class="string">//168.</span>*.*<span class="string">.118</span><span class="function">:6800</span> <span class="params">--server=http</span>:<span class="string">//168.</span>*.*<span class="string">.119</span><span class="function">:6800</span> <span class="params">--username=admin</span> <span class="params">--password=admin</span> <span class="params">--database-url=sqlite</span>:<span class="string">////root/spiderkeeper/SpiderKeeper.db</span> &gt;&gt; <span class="string">/root/scrapy-cluster/spiderkeeper.log</span> 2&gt;&amp;1 &amp;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup spiderkeeper <span class="params">--server=http</span>:<span class="string">//168.</span>*.*<span class="string">.118</span><span class="function">:6800</span> <span class="params">--server=http</span>:<span class="string">//168.</span>*.*<span class="string">.119</span><span class="function">:6800</span> <span class="params">--username=admin</span> <span class="params">--password=admin</span> <span class="params">--database-url=sqlite</span>:<span class="string">////root/spiderkeeper/SpiderKeeper.db</span> &gt;&gt; <span class="string">/root/scrapy-cluster/spiderkeeper.log</span> 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>注意：要使用spiderkeeper管理同一个集群，爬虫项目名称必须一致，同时集群中scrapy-cluster配置相同spider任务</p>
 </blockquote>
@@ -608,7 +619,7 @@
   <p><span>发布时间:</span>2018年09月10日 - 20:09</p>
   <p><span>最后更新:</span>2018年09月15日 - 20:09</p>
   <p><span>原始链接:</span><a href="/python-001-scrapy-cluster.html" title="Scrapy-cluster分布式爬虫">https://peniridis.github.io/python-001-scrapy-cluster.html</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://peniridis.github.io/python-001-scrapy-cluster.html" aria-label="复制成功！"></i></span>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://peniridis.github.io/python-001-scrapy-cluster.html"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -750,9 +761,11 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/ajie.jpg" alt="一打鹏">
+              <img class="site-author-image" itemprop="image"
+                src="/images/ajie.jpg"
+                alt="一打鹏" />
             
               <p class="site-author-name" itemprop="name">一打鹏</p>
               <p class="site-description motion-element" itemprop="description">Great artist always hid themselves in their work.</p>
@@ -877,8 +890,8 @@ show_date_time();
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <script async="" src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">© <span itemprop="copyrightYear">2018</span>
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="heart">
     <i class="fa fa-heart"></i>
   </span>
@@ -901,7 +914,7 @@ show_date_time();
 
 
 
-  <div class="theme-info">主题 — <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 
 
 
@@ -911,7 +924,7 @@ show_date_time();
 </div>
         
 <div class="busuanzi-count">
-  <script async="" src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
     <span class="site-uv">
@@ -1045,7 +1058,7 @@ show_date_time();
   
 
     
-      <script id="dsq-count-scr" src="https://peniridis&amp;blog.disqus.com/count.js" async=""></script>
+      <script id="dsq-count-scr" src="https://peniridis&blog.disqus.com/count.js" async></script>
     
 
     
@@ -1557,7 +1570,6 @@ show_date_time();
   $("body").backstretch("https://i.loli.net/2018/09/10/5b966f426f928.jpeg");
   </script>
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/love.js"></script>
-
-
-</body></html>
+  <script type="text/javascript" src="/js/src/love.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
