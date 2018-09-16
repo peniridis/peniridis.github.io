@@ -138,7 +138,7 @@
 <meta property="og:site_name" content="Winter Coderʕ•͓͡•͡ʔ">
 <meta property="og:description" content="记录编译原理中文法的知识点 编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-16T08:50:33.000Z">
+<meta property="og:updated_time" content="2018-09-16T12:01:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="软考（一）：文法">
 <meta name="twitter:description" content="记录编译原理中文法的知识点 编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。">
@@ -505,8 +505,11 @@
 <h3 id="实例1">实例1</h3>
 <p><span class="math display">\[
 A-&gt;\varepsilon|aB,B-&gt;Ab|a
-\]</span> &gt; 判断上面推导式中满足什么类型的文法</p>
-<p>首先要判断哪些是==终结符和非终结符==,简单来讲终结符就是终结的,最小的不可拆分的元素,而不是终结符的都是非终结符.这个应该是没有任何问题的,所以上题中,的非终结符就是AB,其他都是非终结符.而0型文法中,讲到只需要在p中至少有一个非终结符,也就是在推导式的左边至少存在一个非终结符就可以了.这样一来,我们看到在等式的左边,两个都是非终结符.肯定满足0型文法,下面就是1型文法了,1型文法是怎么规定的呢?在0型文法的基础上,推导式的==左边的长度肯定小于或者等于右边的长度==,题中p集合里面左边的长度都小于右边的长度,所以肯定符合1型文法;接下来就是看看是否满足2型文法了.2型文法是怎么来限定的呢？在1型文法的基础上，在推导式的==左边每个都是非终结符==，如题，每个推导式的左边都是非终结符，所以肯定是2型文法了；3型文法的意思就是2型文法的基础上，看看是否满足右线性或者左线性，我们将这个推导式分开来判断。A–&gt;a或者A—&gt;aB，第一个拆开的推导式是右线性，而B—&gt;A是左线性的，3型文法是怎么规定的呢？是符合==左线性或者右线性==。</p>
+\]</span></p>
+<blockquote>
+<p>判断上面推导式中满足什么类型的文法</p>
+</blockquote>
+<p>首先要判断哪些是<strong>终结符和非终结符</strong>,简单来讲终结符就是终结的,最小的不可拆分的元素,而不是终结符的都是非终结符.这个应该是没有任何问题的,所以上题中,的非终结符就是AB,其他都是非终结符.而0型文法中,讲到只需要在p中至少有一个非终结符,也就是在推导式的左边至少存在一个非终结符就可以了.这样一来,我们看到在等式的左边,两个都是非终结符.肯定满足0型文法,下面就是1型文法了,1型文法是怎么规定的呢?在0型文法的基础上,推导式的<strong>左边的长度肯定小于或者等于右边的长度</strong>,题中p集合里面左边的长度都小于右边的长度,所以肯定符合1型文法;接下来就是看看是否满足2型文法了.2型文法是怎么来限定的呢？在1型文法的基础上，在推导式的<strong>左边每个都是非终结符</strong>，如题，每个推导式的左边都是非终结符，所以肯定是2型文法了；3型文法的意思就是2型文法的基础上，看看是否满足右线性或者左线性，我们将这个推导式分开来判断。A–&gt;a或者A—&gt;aB，第一个拆开的推导式是右线性，而B—&gt;A是左线性的，3型文法是怎么规定的呢？是符合<strong>左线性或者右线性</strong>。</p>
 <h3 id="实例2">实例2</h3>
 <p><span class="math display">\[
 \begin{align*}
@@ -524,10 +527,14 @@ A-&gt;\varepsilon|aB,B-&gt;Ab|a
 <p><span class="math display">\[
 \begin{gather}
 &amp;\text{对于一下编号为①，②，③的正则式，正确的说法是___。}\\
-&amp;\text{①}(aa^*|ab)^b  \qquad\qquad\qquad \text{②}(a|b)^b \qquad\qquad\qquad \text{③}((a|b)^*|aa)^b \\
+&amp;\begin{matrix}
+\text{①}(aa^*|ab)^b  &amp; \text{②}(a|b)^b &amp; \text{③}((a|b)^*|aa)^b \\
 \qquad \\
-&amp;A. \text{正则式①，②等价} \qquad B. \text{正则式①，③等价}\\
-&amp;C. \text{正则式②，③等价} \qquad D. \text{正则式①，②，③互不等价}
+\end{matrix}\\
+&amp;\begin{matrix}
+A. \text{正则式①，②等价} &amp; B. \text{正则式①，③等价}\\
+C. \text{正则式②，③等价} &amp; D. \text{正则式①，②，③互不等价}
+\end{matrix}
 \end{gather}
 \]</span> 解析：C。①中任意个前始终有b，②中为任意个a或b，故①②不等价，③中包含②并且任意长度a和故b组成的串，aa限制条件不是必要条件故②③等价。</p>
 <h3 id="实例5">实例5</h3>
@@ -561,7 +568,7 @@ A. a^*bb^* &amp; B. aa^*bb^* &amp; C. aa^*b^* &amp; D. a^*b^*
   <p><span>本文标题:</span><a href="/softexam-001-grammar.html">软考（一）：文法</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 一打鹏 的个人博客">一打鹏</a></p>
   <p><span>发布时间:</span>2018年09月15日 - 20:09</p>
-  <p><span>最后更新:</span>2018年09月16日 - 16:09</p>
+  <p><span>最后更新:</span>2018年09月16日 - 20:09</p>
   <p><span>原始链接:</span><a href="/softexam-001-grammar.html" title="软考（一）：文法">https://peniridis.github.io/softexam-001-grammar.html</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://peniridis.github.io/softexam-001-grammar.html"  aria-label="复制成功！"></i></span>
   </p>
