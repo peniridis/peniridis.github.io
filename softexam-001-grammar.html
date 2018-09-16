@@ -130,18 +130,18 @@
 
 
 
-<meta name="description" content="记录编译原理中文法的知识点编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。">
+<meta name="description" content="记录编译原理中文法的知识点 编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。">
 <meta name="keywords" content="软考,编译原理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="软考（一）：文法">
 <meta property="og:url" content="https://peniridis.github.io/softexam-001-grammar.html">
 <meta property="og:site_name" content="Winter Coderʕ•͓͡•͡ʔ">
-<meta property="og:description" content="记录编译原理中文法的知识点编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。">
+<meta property="og:description" content="记录编译原理中文法的知识点 编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-09-16T08:50:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="软考（一）：文法">
-<meta name="twitter:description" content="记录编译原理中文法的知识点编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。">
+<meta name="twitter:description" content="记录编译原理中文法的知识点 编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。">
 
 
 
@@ -439,90 +439,107 @@
 
       
         <blockquote>
-<p>记录编译原理中文法的知识点<br>编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。</p>
+<p>记录编译原理中文法的知识点 编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。</p>
 </blockquote>
 <a id="more"></a>
-<p>@toc</p>
-<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>正如英语是由句子组成的集合，而句子又是由单词和标点符号组成的序列那样。程序设计语言 C 语言，是由 C 程序所组成的集合，而程序是由类似 if , begin, end 的符号，字母和数字这样一些基本符号所组成。</p>
+<p><span class="citation" data-cites="toc">@toc</span></p>
+<h2 id="概念">概念</h2>
+<p>正如英语是由句子组成的集合，而句子又是由单词和标点符号组成的序列那样。程序设计语言 C 语言，是由 C 程序所组成的集合，而程序是由类似 if , begin, end 的符号，字母和数字这样一些基本符号所组成。</p>
 <p>从字面上看，每个程序都是一个“基本符号”串，设有一基本符号串，那么 C 语言可看成是在这个基本符号集上定义的，按一定规则构成的一切基本符号串组成的集合。</p>
 <p>通俗的讲就是：根据一些指定的规则，来确定编程语言的语法，从而实现编译器的功能。</p>
-<h2 id="终结符和非终结符"><a href="#终结符和非终结符" class="headerlink" title="终结符和非终结符"></a>终结符和非终结符</h2><p>文法是由非终结符（大写字母）和终结符（小写字母）以及“—&gt;”组成的。</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A—&gt; a</span><br><span class="line">B—&gt;dba</span><br><span class="line">S—&gt; Ab</span><br><span class="line">adB—&gt;d</span><br></pre></td></tr></table></figure>
+<h2 id="终结符和非终结符">终结符和非终结符</h2>
+<p>文法是由非终结符（大写字母）和终结符（小写字母）以及“—&gt;”组成的。</p>
+<!--￼0-->
 <p>通过上面的几个例子可以看出：非终结符A、B、S，一般是写在左边，而终结符a、dba、b，一般是写在右边的。当然习惯的写法是非终结符用S（Start）表示，写在左边，自然而然的小写的就在右边了，这样也便于我们记忆文法的表示方式。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">G2[S]</span><br><span class="line"><span class="meta">S-&gt;</span><span class="bash">Ap</span></span><br><span class="line"><span class="meta">S-&gt;</span><span class="bash">Bq</span></span><br><span class="line"><span class="meta">A-&gt;</span><span class="bash">a</span></span><br><span class="line"><span class="meta">A-&gt;</span><span class="bash">cA</span></span><br><span class="line"><span class="meta">B-&gt;</span><span class="bash">b</span></span><br><span class="line"><span class="meta">b-&gt;</span><span class="bash">dB</span></span><br></pre></td></tr></table></figure>
+<!--￼1-->
 <p>如上所示：在这个推导式的集合中，存在六个推导式。其中S、A、B为非终结符。a、b、c、d、q、p为终结符。终结符是原子不可分的。</p>
-<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>在1956年的春天，一个叫乔姆斯基(Chomsky)的人发明了上述文法，他觉得有些文法存在着相似的形式，于是他就给文法分了一下类。</p>
+<h2 id="分类">分类</h2>
+<p>在1956年的春天，一个叫乔姆斯基(Chomsky)的人发明了上述文法，他觉得有些文法存在着相似的形式，于是他就给文法分了一下类。</p>
 <p>首先有一个前提：设有一个组合G=(Vn,Vt,P,S)。其中Vn是非终结符的集合，Vt是终结符的集合，P是推导式的一个集合，S是开始符。就上面的例子来说，A、B、S是Vn，a、dba、b是Vt，整个的集合为P。</p>
-<h3 id="0型文法"><a href="#0型文法" class="headerlink" title="0型文法"></a>0型文法</h3><p>这是最简单的一个文法。它比较宽容，没有那么多的限制条件。左边必须要包含这些元素或者元素组合中的至少一个非终结符，右边可以是这些元素的任意组合，这样就构成了0型文法。由于限制最少，所以见到的文法至少是一个0型文法。如：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">A-&gt;</span><span class="bash">a</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="1型文法（上下文有关文法）"><a href="#1型文法（上下文有关文法）" class="headerlink" title="1型文法（上下文有关文法）"></a>1型文法（上下文有关文法）</h3><p>1型文法也叫上下文有关文法，此文法对应于线性有界自动机。</p>
+<h3 id="型文法">0型文法</h3>
+<p>这是最简单的一个文法。它比较宽容，没有那么多的限制条件。左边必须要包含这些元素或者元素组合中的至少一个非终结符，右边可以是这些元素的任意组合，这样就构成了0型文法。由于限制最少，所以见到的文法至少是一个0型文法。如： <!--￼2--></p>
+<h3 id="型文法上下文有关文法">1型文法（上下文有关文法）</h3>
+<p>1型文法也叫上下文有关文法，此文法对应于线性有界自动机。</p>
 <p>它在0型文法的基础之上，只添加了一个要求：右边的长度&gt;=左边的长度（终结符或非终结符的个数）。A—&gt; a、B—&gt;dba则是1型文法，而adB—&gt;d不符合1型文法要求 注意这里有一个特殊的形式 S—&gt; ∑（∑表示空），也是一个1型文法。</p>
-<h3 id="2型文法（上下文无关文法）"><a href="#2型文法（上下文无关文法）" class="headerlink" title="2型文法（上下文无关文法）"></a>2型文法（上下文无关文法）</h3><p>2型文法也叫上下文有关文法，此文法对应于下推自动机自动机。</p>
+<h3 id="型文法上下文无关文法">2型文法（上下文无关文法）</h3>
+<p>2型文法也叫上下文有关文法，此文法对应于下推自动机自动机。</p>
 <p>它在1型文法的基础上，有增加了一个要求：左边必须是非终结符（个数不限）。 如：AB—&gt;de 属于2型文法，而 Aa—&gt;DE则不是，因为Aa中含有a。</p>
-<h3 id="3型文法（正规文法）"><a href="#3型文法（正规文法）" class="headerlink" title="3型文法（正规文法）"></a>3型文法（正规文法）</h3><p>3型文法也叫正规文法，它对应有限状态自动机。</p>
+<h3 id="型文法正规文法">3型文法（正规文法）</h3>
+<p>3型文法也叫正规文法，它对应有限状态自动机。</p>
 <p>它是在2型的基础上提出了要么一个非终结符推出一个终结符，要么一个非终结符推出一个终结符并且带一个非终结符。</p>
 <p>A-&gt;a | aB（右线性）或 A-&gt;a | Ba（左线性）</p>
 <p>而上面的左线性、右线性是相互独立的。如：A—&gt;b、A—&gt;bD这是3型文法</p>
 <p>但是A—&gt;b、A—&gt;bD、A—&gt;Db则不是3型文法。从这里可以看出，对于3型文法，它不是左右线性的“组合”，要么都是右线性，要么都是左线性。</p>
-<h3 id="三种文法关系"><a href="#三种文法关系" class="headerlink" title="三种文法关系"></a>三种文法关系</h3><script type="math/tex; mode=display">
-3\text{型文法} \subset2\text{型文法} \subset1\text{型文法} \subset0\text{型文法}</script><h2 id="正规式"><a href="#正规式" class="headerlink" title="正规式"></a>正规式</h2><div class="table-container">
+<h3 id="三种文法关系">三种文法关系</h3>
+<p><span class="math display">\[
+3\text{型文法} \subset2\text{型文法} \subset1\text{型文法} \subset0\text{型文法}
+\]</span></p>
+<h2 id="正规式">正规式</h2>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>item</th>
 <th>文法产生式</th>
-<th style="text-align:right">正规式</th>
+<th style="text-align: right;">正规式</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>规则1</td>
-<td><script type="math/tex">A->xB,B->y</script></td>
-<td style="text-align:right"><script type="math/tex">A=xy</script></td>
+<td><span class="math display">\[A-&gt;xB,B-&gt;y\]</span></td>
+<td style="text-align: right;"><span class="math display">\[A=xy\]</span></td>
 </tr>
-<tr>
+<tr class="even">
 <td>规则2</td>
-<td><script type="math/tex">A->xA\vert y</script></td>
-<td style="text-align:right"><script type="math/tex">A=x^*y</script></td>
+<td><span class="math display">\[A-&gt;xA\vert y\]</span></td>
+<td style="text-align: right;"><span class="math display">\[A=x^*y\]</span></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>规则3</td>
-<td><script type="math/tex">A->x,A->y</script></td>
-<td style="text-align:right"><script type="math/tex">A=x\vert y</script></td>
+<td><span class="math display">\[A-&gt;x,A-&gt;y\]</span></td>
+<td style="text-align: right;"><span class="math display">\[A=x\vert y\]</span></td>
 </tr>
 </tbody>
 </table>
-</div>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h3 id="实例1"><a href="#实例1" class="headerlink" title="实例1"></a>实例1</h3><script type="math/tex; mode=display">
-A->\varepsilon|aB,B->Ab|a</script><blockquote>
-<p>判断上面推导式中满足什么类型的文法</p>
-</blockquote>
-<p>首先要判断哪些是==终结符和非终结符==,简单来讲终结符就是终结的,最小的不可拆分的元素,而不是终结符的都是非终结符.这个应该是没有任何问题的,所以上题中,的非终结符就是AB,其他都是非终结符.而0型文法中,讲到只需要在p中至少有一个非终结符,也就是在推导式的左边至少存在一个非终结符就可以了.这样一来,我们看到在等式的左边,两个都是非终结符.肯定满足0型文法,下面就是1型文法了,1型文法是怎么规定的呢?在0型文法的基础上,推导式的==左边的长度肯定小于或者等于右边的长度==,题中p集合里面左边的长度都小于右边的长度,所以肯定符合1型文法;接下来就是看看是否满足2型文法了.2型文法是怎么来限定的呢？在1型文法的基础上，在推导式的==左边每个都是非终结符==，如题，每个推导式的左边都是非终结符，所以肯定是2型文法了；3型文法的意思就是2型文法的基础上，看看是否满足右线性或者左线性，我们将这个推导式分开来判断。A—&gt;a或者A—-&gt;aB，第一个拆开的推导式是右线性，而B—-&gt;A是左线性的，3型文法是怎么规定的呢？是符合==左线性或者右线性==。</p>
-<h3 id="实例2"><a href="#实例2" class="headerlink" title="实例2"></a>实例2</h3><script type="math/tex; mode=display">
+<h2 id="实例">实例</h2>
+<h3 id="实例1">实例1</h3>
+<p><span class="math display">\[
+A-&gt;\varepsilon|aB,B-&gt;Ab|a
+\]</span> &gt; 判断上面推导式中满足什么类型的文法</p>
+<p>首先要判断哪些是==终结符和非终结符==,简单来讲终结符就是终结的,最小的不可拆分的元素,而不是终结符的都是非终结符.这个应该是没有任何问题的,所以上题中,的非终结符就是AB,其他都是非终结符.而0型文法中,讲到只需要在p中至少有一个非终结符,也就是在推导式的左边至少存在一个非终结符就可以了.这样一来,我们看到在等式的左边,两个都是非终结符.肯定满足0型文法,下面就是1型文法了,1型文法是怎么规定的呢?在0型文法的基础上,推导式的==左边的长度肯定小于或者等于右边的长度==,题中p集合里面左边的长度都小于右边的长度,所以肯定符合1型文法;接下来就是看看是否满足2型文法了.2型文法是怎么来限定的呢？在1型文法的基础上，在推导式的==左边每个都是非终结符==，如题，每个推导式的左边都是非终结符，所以肯定是2型文法了；3型文法的意思就是2型文法的基础上，看看是否满足右线性或者左线性，我们将这个推导式分开来判断。A–&gt;a或者A—&gt;aB，第一个拆开的推导式是右线性，而B—&gt;A是左线性的，3型文法是怎么规定的呢？是符合==左线性或者右线性==。</p>
+<h3 id="实例2">实例2</h3>
+<p><span class="math display">\[
 \begin{align*}
-&\mbox{文法}: G: S->xSx | y\mbox{所识别的语言是}（）。\\
-&A. xyx\\
-&B. (xyz)^*\\
-&C. x^*yx^*\\
-&D. x^nyx^n(n\geq0)\\
-\end{align*}</script><p>解析：D。</p>
-<script type="math/tex; mode=display">S->xSx->xxSxx->x…S…x->x…y...x->x^nyx^n</script><p>因为S-&gt;y，所以 n 可以为0，即 n 的范围为大于等于0。</p>
-<h3 id="实例3"><a href="#实例3" class="headerlink" title="实例3"></a>实例3</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定文法A-&gt;<span class="keyword">bA|ca,该文法的句子是：</span></span><br><span class="line"><span class="keyword">A. </span><span class="keyword">bba</span></span><br><span class="line"><span class="keyword">B. </span>cab</span><br><span class="line"><span class="symbol">C.</span> <span class="keyword">bca</span></span><br><span class="line"><span class="keyword">D. </span>cba</span><br></pre></td></tr></table></figure>
+&amp;\mbox{文法}: G: S-&gt;xSx | y\mbox{所识别的语言是}（）。\\
+&amp;A. xyx\\
+&amp;B. (xyz)^*\\
+&amp;C. x^*yx^*\\
+&amp;D. x^nyx^n(n\geq0)\\
+\end{align*}
+\]</span></p>
+<p>解析：D。 <span class="math display">\[S-&gt;xSx-&gt;xxSxx-&gt;x…S…x-&gt;x…y...x-&gt;x^nyx^n\]</span> 因为S-&gt;y，所以 n 可以为0，即 n 的范围为大于等于0。 ### 实例3</p>
+<!--￼3-->
 <p>解析：C。A-&gt;bA-&gt;bca。第二次替换A的时候，使用候选式A-&gt;ca 即可。</p>
-<h3 id="实例4"><a href="#实例4" class="headerlink" title="实例4"></a>实例4</h3><script type="math/tex; mode=display">
+<h3 id="实例4">实例4</h3>
+<p><span class="math display">\[
 \begin{gather}
-&\text{对于一下编号为①，②，③的正则式，正确的说法是___。}\\
-&\text{①}(aa^*|ab)^b  \qquad\qquad\qquad \text{②}(a|b)^b \qquad\qquad\qquad \text{③}((a|b)^*|aa)^b \\
+&amp;\text{对于一下编号为①，②，③的正则式，正确的说法是___。}\\
+&amp;\text{①}(aa^*|ab)^b  \qquad\qquad\qquad \text{②}(a|b)^b \qquad\qquad\qquad \text{③}((a|b)^*|aa)^b \\
 \qquad \\
-&A. \text{正则式①，②等价} \qquad B. \text{正则式①，③等价}\\
-&C. \text{正则式②，③等价} \qquad D. \text{正则式①，②，③互不等价}
-\end{gather}</script><p>解析：C。①中任意个前始终有b，②中为任意个a或b，故①②不等价，③中包含②并且任意长度a和故b组成的串，aa限制条件不是必要条件故②③等价。</p>
-<h3 id="实例5"><a href="#实例5" class="headerlink" title="实例5"></a>实例5</h3><script type="math/tex; mode=display">
+&amp;A. \text{正则式①，②等价} \qquad B. \text{正则式①，③等价}\\
+&amp;C. \text{正则式②，③等价} \qquad D. \text{正则式①，②，③互不等价}
+\end{gather}
+\]</span> 解析：C。①中任意个前始终有b，②中为任意个a或b，故①②不等价，③中包含②并且任意长度a和故b组成的串，aa限制条件不是必要条件故②③等价。</p>
+<h3 id="实例5">实例5</h3>
+<p><span class="math display">\[
 \begin{gather}
-&\text{语言}L=\{a^mb^n|m\geq0,n\geq1\} \text{的正规表达式是_____。}\\
-&\begin{matrix}
-A. a^*bb^* & B. aa^*bb^* & C. aa^*b^* & D. a^*b^* 
+&amp;\text{语言}L=\{a^mb^n|m\geq0,n\geq1\} \text{的正规表达式是_____。}\\
+&amp;\begin{matrix}
+A. a^*bb^* &amp; B. aa^*bb^* &amp; C. aa^*b^* &amp; D. a^*b^* 
 \end{matrix}
-\end{gather}</script><p>解析：A。a^<em>代表若干个a包括零个a，\(b^</em>b\)表示至少一个b。</p>
+\end{gather}
+\]</span></p>
+<p>解析：A。a^<em>代表若干个a包括零个a，\(b^</em>b\)表示至少一个b。</p>
 
       
     </div>
@@ -809,7 +826,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#终结符和非终结符"><span class="nav-number">2.</span> <span class="nav-text">终结符和非终结符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类"><span class="nav-number">3.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0型文法"><span class="nav-number">3.1.</span> <span class="nav-text">0型文法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1型文法（上下文有关文法）"><span class="nav-number">3.2.</span> <span class="nav-text">1型文法（上下文有关文法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2型文法（上下文无关文法）"><span class="nav-number">3.3.</span> <span class="nav-text">2型文法（上下文无关文法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3型文法（正规文法）"><span class="nav-number">3.4.</span> <span class="nav-text">3型文法（正规文法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种文法关系"><span class="nav-number">3.5.</span> <span class="nav-text">三种文法关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正规式"><span class="nav-number">4.</span> <span class="nav-text">正规式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例"><span class="nav-number">5.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实例1"><span class="nav-number">5.1.</span> <span class="nav-text">实例1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例2"><span class="nav-number">5.2.</span> <span class="nav-text">实例2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例3"><span class="nav-number">5.3.</span> <span class="nav-text">实例3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例4"><span class="nav-number">5.4.</span> <span class="nav-text">实例4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例5"><span class="nav-number">5.5.</span> <span class="nav-text">实例5</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#终结符和非终结符"><span class="nav-number">2.</span> <span class="nav-text">终结符和非终结符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类"><span class="nav-number">3.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#型文法"><span class="nav-number">3.1.</span> <span class="nav-text">0型文法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#型文法上下文有关文法"><span class="nav-number">3.2.</span> <span class="nav-text">1型文法（上下文有关文法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#型文法上下文无关文法"><span class="nav-number">3.3.</span> <span class="nav-text">2型文法（上下文无关文法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#型文法正规文法"><span class="nav-number">3.4.</span> <span class="nav-text">3型文法（正规文法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种文法关系"><span class="nav-number">3.5.</span> <span class="nav-text">三种文法关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正规式"><span class="nav-number">4.</span> <span class="nav-text">正规式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例"><span class="nav-number">5.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实例1"><span class="nav-number">5.1.</span> <span class="nav-text">实例1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例2"><span class="nav-number">5.2.</span> <span class="nav-text">实例2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例4"><span class="nav-number">5.3.</span> <span class="nav-text">实例4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例5"><span class="nav-number">5.4.</span> <span class="nav-text">实例5</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -859,7 +876,7 @@ show_date_time();
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.3k字</span>
+  <span class="post-count">博客全站共4.4k字</span>
 </div>
         
 <div class="busuanzi-count">
@@ -1529,6 +1546,23 @@ show_date_time();
   $("body").backstretch("https://i.loli.net/2018/09/10/5b966f426f928.jpeg");
   </script>
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/love.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <script type="text/javascript" src="/js/src/love.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 </body>
 </html>
