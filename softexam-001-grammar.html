@@ -138,7 +138,7 @@
 <meta property="og:site_name" content="Winter Coderʕ•͓͡•͡ʔ">
 <meta property="og:description" content="记录编译原理中文法的知识点 编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-16T12:01:24.000Z">
+<meta property="og:updated_time" content="2018-09-16T12:22:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="软考（一）：文法">
 <meta name="twitter:description" content="记录编译原理中文法的知识点 编译原理顾名思义就是处理高级语言，使之称为计算机能够识别的语言（低级语言）的原理。而文法呢？就是用来描述程序设计语言的方法。类似佛法,用来描述佛家的诵经禅道的规则的。">
@@ -525,28 +525,28 @@ A-&gt;\varepsilon|aB,B-&gt;Ab|a
 <p>解析：C。A-&gt;bA-&gt;bca。第二次替换A的时候，使用候选式A-&gt;ca 即可。</p>
 <h3 id="实例4">实例4</h3>
 <p><span class="math display">\[
-\begin{gather}
+\begin{align*}
 &amp;\text{对于一下编号为①，②，③的正则式，正确的说法是___。}\\
 &amp;\begin{matrix}
 \text{①}(aa^*|ab)^b  &amp; \text{②}(a|b)^b &amp; \text{③}((a|b)^*|aa)^b \\
 \qquad \\
 \end{matrix}\\
 &amp;\begin{matrix}
-A. \text{正则式①，②等价} &amp; B. \text{正则式①，③等价}\\
-C. \text{正则式②，③等价} &amp; D. \text{正则式①，②，③互不等价}
+A. \text{正则式①，②等价} &amp; \qquad &amp; B. \text{正则式①，③等价}\\
+C. \text{正则式②，③等价} &amp; \qquad D. \text{正则式①，②，③互不等价}
 \end{matrix}
-\end{gather}
+\end{align*}
 \]</span> 解析：C。①中任意个前始终有b，②中为任意个a或b，故①②不等价，③中包含②并且任意长度a和故b组成的串，aa限制条件不是必要条件故②③等价。</p>
 <h3 id="实例5">实例5</h3>
 <p><span class="math display">\[
-\begin{gather}
+\begin{align*}
 &amp;\text{语言}L=\{a^mb^n|m\geq0,n\geq1\} \text{的正规表达式是_____。}\\
 &amp;\begin{matrix}
 A. a^*bb^* &amp; B. aa^*bb^* &amp; C. aa^*b^* &amp; D. a^*b^* 
 \end{matrix}
-\end{gather}
+\end{align*}
 \]</span></p>
-<p>解析：A。a^<em>代表若干个a包括零个a，\(b^</em>b\)表示至少一个b。</p>
+<p>解析：A。<span class="math inline">\(a^*\)</span> 代表若干个a包括零个a，\(b^*b\)表示至少一个b。</p>
 
       
     </div>
@@ -883,7 +883,7 @@ show_date_time();
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共4.4k字</span>
+  <span class="post-count">博客全站共4.5k字</span>
 </div>
         
 <div class="busuanzi-count">
