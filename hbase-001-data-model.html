@@ -138,7 +138,7 @@
 <meta property="og:site_name" content="Winter Coderʕ•͓͡•͡ʔ">
 <meta property="og:description" content="校验Hbase官方指南文档Apache HBase ™ Reference Guide Version 3.0.0-SNAPSHOT   Data Model部分No.20到No.32小节">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-17T10:15:57.000Z">
+<meta property="og:updated_time" content="2018-09-17T11:37:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Apache HBase ™ Reference Guide：Hbase官方指南3.0（一）「数据模型」">
 <meta name="twitter:description" content="校验Hbase官方指南文档Apache HBase ™ Reference Guide Version 3.0.0-SNAPSHOT   Data Model部分No.20到No.32小节">
@@ -490,37 +490,56 @@
 <tr class="header">
 <th>行键</th>
 <th>时间戳</th>
-<th style="text-align: right;">列族contents</th>
-<th style="text-align: right;">列族anchor</th>
-<th style="text-align: right;">列族people</th>
+<th>列族contents</th>
+<th>列族anchor</th>
+<th>列族people</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>“com.cnn.www”</td>
 <td>t9</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;">anchor:cnnsi.com = “CNN”</td>
-<td style="text-align: right;"></td>
+<td></td>
+<td>anchor:cnnsi.com = “CNN”</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>“com.cnn.www”</td>
 <td>t8</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;">anchor:cnnsi.com = “CNN”</td>
-<td style="text-align: right;"></td>
+<td></td>
+<td>anchor:cnnsi.com = “CNN”</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“com.cnn.www”</td>
+<td>t6</td>
+<td>contents:html = “&lt;html&gt;…​”</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“com.cnn.www”</td>
+<td>t5</td>
+<td>contents:html = “&lt;html&gt;…​”</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“com.cnn.www”</td>
+<td>t3</td>
+<td>contents:html = “&lt;html&gt;…​”</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>“com.example.www”</td>
+<td>t5</td>
+<td>contents:html = “&lt;html&gt;…​”</td>
+<td></td>
+<td>people:author = “John Doe”</td>
 </tr>
 </tbody>
 </table>
-| “com.cnn.www” | t6 | contents:html = &quot;
-<html>
-…​&quot; | | | | “com.cnn.www” | t5 | contents:html = &quot;
-<html>
-…​&quot; | | | | “com.cnn.www” | t3 | contents:html = &quot;
-<html>
-…​&quot; | | | | “com.example.www” | t5 | contents:html = &quot;
-<html>
-<p>…​&quot; | | people:author = “John Doe” |</p>
 <p>在HBase中，表格中的单元如果是空将不占用空间或者事实上不存在。这就使得HBase看起来“稀疏”。表格视图不是唯一方式来查看HBase中数据，甚至不是最精确的。下面的方式以多维度映射的方式来表达相同的信息。这只是一个说明示例的模型可能不是严格准确的。</p>
 <!--￼0-->
 <h2 id="物理视图">物理视图</h2>
@@ -530,19 +549,19 @@
 <tr class="header">
 <th>行键</th>
 <th>时间戳</th>
-<th style="text-align: right;">列族anchor</th>
+<th style="text-align: center;">列族anchor</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>“com.cnn.www”</td>
 <td>t9</td>
-<td style="text-align: right;">anchor:cnnsi.com = “CNN”</td>
+<td style="text-align: center;">anchor:cnnsi.com = “CNN”</td>
 </tr>
 <tr class="even">
 <td>“com.cnn.www”</td>
 <td>t8</td>
-<td style="text-align: right;">anchor:my.look.ca = “CNN.com”</td>
+<td style="text-align: center;">anchor:my.look.ca = “CNN.com”</td>
 </tr>
 </tbody>
 </table>
@@ -552,19 +571,27 @@
 <tr class="header">
 <th>行键</th>
 <th>时间戳</th>
-<th style="text-align: right;">列族contents</th>
+<th>列族contents</th>
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td>“com.cnn.www”</td>
+<td>t6</td>
+<td>contents:html = “&lt;html&gt;…​”</td>
+</tr>
+<tr class="even">
+<td>“com.cnn.www”</td>
+<td>t5</td>
+<td>contents:html = “&lt;html&gt;…​”</td>
+</tr>
+<tr class="odd">
+<td>“com.cnn.www”</td>
+<td>t3</td>
+<td>contents:html = “&lt;html&gt;…​”</td>
+</tr>
 </tbody>
 </table>
-| “com.cnn.www” | t6 | contents:html = &quot;
-<html>
-…​&quot; | | “com.cnn.www” | t5 | contents:html = &quot;
-<html>
-…​&quot; | | “com.cnn.www” | t3 | contents:html = &quot;
-<html>
-<p>…​&quot; |</p>
 <p>概念视图中的空单元实际上是没有进行存储的。因此对于返回时间戳为t8的<code>contents:html</code>的值的请求，结果为空。同样的，一个返回时间戳为t9的<code>anchor:my.look.ca</code>的值的请求，结果也为空。然而，如果没有指定时间戳的话，那么会返回特定列的最新值。对有多个版本的列，优先返回最新的值，因为时间戳是按照递减顺序存储的。因此对于一个返回<code>com.cnn.www</code>里面所有的列的值并且没有指定时间戳的请求，返回的结果会是时间戳为t6的<code>contents:html</code>的值、时间戳 t9的<code>anchor:cnnsi.com</code>的值和时间戳t8的 <code>anchor:my.look.ca</code> 。</p>
 <p>关于Apache Hbase如何存储数据的内部细节，请查看 <a href="http://hbase.apache.org/book.html#regions.arch" target="_blank" rel="noopener">regions.arch</a>.</p>
 <h2 id="命名空间">命名空间</h2>
@@ -577,14 +604,16 @@
 <h3 id="命名空间管理">命名空间管理</h3>
 <p>命名空间可以被创建、移除和修改。命名空间关系的指定是在创建表格通过指定一个完全限定表名的形式完成的：</p>
 <!--￼1-->
-<p><em>Example 7. Examples</em> <!--￼2--></p>
+<p><em>Example 7. Examples</em></p>
+<!--￼2-->
 <h3 id="预定义命名空间">预定义命名空间</h3>
 <p>有两种预定义的特殊的命名空间</p>
 <ul>
 <li>hbase – 系统命名空间, 用于包含HBase内部表</li>
 <li>default – 没有明确指定命名空间的表将会自动落入这个命名空间</li>
 </ul>
-<p><em>Example 8. Examples</em> <!--￼3--></p>
+<p><em>Example 8. Examples</em></p>
+<!--￼3-->
 <h2 id="表">表</h2>
 <p>在Schema（模式）定义时预先声明表。</p>
 <h2 id="行">行</h2>
@@ -681,7 +710,7 @@
 <p>然而，这不意味着等价式join功能没办法在你的应用中实现，但是你必须自己实现。两种主要策略是将数据非结构化地写到HBase中，或者查找表格然后在应用中或者MapReduce代码中实现join操作（正如RDBMS所演示的，将根据表格的大小会有几种不同的策略，例如嵌套使循环和hash-join）。哪个是最好的方法？这将依赖于你想做什么，没有一种方案能够应对各种情况。</p>
 <h2 id="acid">ACID</h2>
 <p>查看 <a href="http://hbase.apache.org/acid-semantics.html" target="_blank" rel="noopener">ACID Semantics</a>. Lars Hofhansl也写了一份报告 <a href="http://hadoop-hbase.blogspot.com/2012/03/acid-in-hbase.html" target="_blank" rel="noopener">ACID in HBase</a>.</p>
-</html></html></html></html></html></html></html>
+
       
     </div>
     
@@ -711,7 +740,7 @@
   <p><span>本文标题:</span><a href="/hbase-001-data-model.html">Apache HBase ™ Reference Guide：Hbase官方指南3.0（一）「数据模型」</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 一打鹏 的个人博客">一打鹏</a></p>
   <p><span>发布时间:</span>2018年09月17日 - 13:09</p>
-  <p><span>最后更新:</span>2018年09月17日 - 18:09</p>
+  <p><span>最后更新:</span>2018年09月17日 - 19:09</p>
   <p><span>原始链接:</span><a href="/hbase-001-data-model.html" title="Apache HBase ™ Reference Guide：Hbase官方指南3.0（一）「数据模型」">https://peniridis.github.io/hbase-001-data-model.html</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://peniridis.github.io/hbase-001-data-model.html"  aria-label="复制成功！"></i></span>
   </p>
