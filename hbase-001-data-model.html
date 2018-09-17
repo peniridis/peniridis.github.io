@@ -130,18 +130,18 @@
 
 
 
-<meta name="description" content="校验Hbase官方指南文档Apache HBase ™ Reference Guide Version 3.0.0-SNAPSHOT Data Model部分No.20到No.32小节">
+<meta name="description" content="校验Hbase官方指南文档Apache HBase ™ Reference Guide Version 3.0.0-SNAPSHOT   Data Model部分No.20到No.32小节">
 <meta name="keywords" content="Hbase,翻译,Guide,大数据">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Apache HBase ™ Reference Guide：Hbase官方指南3.0（一）「数据模型」">
 <meta property="og:url" content="https://peniridis.github.io/hbase-001-data-model.html">
 <meta property="og:site_name" content="Winter Coderʕ•͓͡•͡ʔ">
-<meta property="og:description" content="校验Hbase官方指南文档Apache HBase ™ Reference Guide Version 3.0.0-SNAPSHOT Data Model部分No.20到No.32小节">
+<meta property="og:description" content="校验Hbase官方指南文档Apache HBase ™ Reference Guide Version 3.0.0-SNAPSHOT   Data Model部分No.20到No.32小节">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-17T09:51:57.000Z">
+<meta property="og:updated_time" content="2018-09-17T10:15:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Apache HBase ™ Reference Guide：Hbase官方指南3.0（一）「数据模型」">
-<meta name="twitter:description" content="校验Hbase官方指南文档Apache HBase ™ Reference Guide Version 3.0.0-SNAPSHOT Data Model部分No.20到No.32小节">
+<meta name="twitter:description" content="校验Hbase官方指南文档Apache HBase ™ Reference Guide Version 3.0.0-SNAPSHOT   Data Model部分No.20到No.32小节">
 
 
 
@@ -439,11 +439,14 @@
 
       
         <blockquote>
-<p>校验Hbase官方指南文档<a href="https://hbase.apache.org/book.html" target="_blank" rel="noopener">Apache HBase ™ Reference Guide Version 3.0.0-SNAPSHOT</a> Data Model部分No.20到No.32小节</p>
+<p>校验Hbase官方指南文档<a href="https://hbase.apache.org/book.html" target="_blank" rel="noopener">Apache HBase ™ Reference Guide Version 3.0.0-SNAPSHOT</a></p>
+</blockquote>
+<blockquote>
+<p>Data Model部分No.20到No.32小节</p>
 </blockquote>
 <a id="more"></a>
 <p><span class="citation" data-cites="toc">@toc</span></p>
-<h1 id="数据模型">数据模型</h1>
+<h2 id="数据模型">数据模型</h2>
 <p>在HBase中，数据存储在具有行和列的表中。关系型数据库（RDBMS）中有相似的概念，这并不是有用的类比。不过，HBase可以被认为是一个多维度的数据映射存储。</p>
 <p><strong>HBase Data Model Terminology Hbase（数据模型术语）</strong></p>
 <ul>
@@ -511,18 +514,51 @@
 </table>
 | “com.cnn.www” | t6 | contents:html = &quot;
 <html>
-…​&quot; | | | “com.cnn.www” | t5 | contents:html = &quot;
+…​&quot; | | | | “com.cnn.www” | t5 | contents:html = &quot;
 <html>
-…​&quot; | | | “com.cnn.www” | t3 | contents:html = &quot;
+…​&quot; | | | | “com.cnn.www” | t3 | contents:html = &quot;
 <html>
-…​&quot; | | | “com.example.www” | t5 | contents:html = &quot;
+…​&quot; | | | | “com.example.www” | t5 | contents:html = &quot;
 <html>
 <p>…​&quot; | | people:author = “John Doe” |</p>
 <p>在HBase中，表格中的单元如果是空将不占用空间或者事实上不存在。这就使得HBase看起来“稀疏”。表格视图不是唯一方式来查看HBase中数据，甚至不是最精确的。下面的方式以多维度映射的方式来表达相同的信息。这只是一个说明示例的模型可能不是严格准确的。</p>
 <!--￼0-->
 <h2 id="物理视图">物理视图</h2>
-<p>尽管在概念层次，表可能看起来是由一些列稀疏的行组成，但他们是通过列族来存储的。一个新建的限定符(column_family:column_qualifier)可以随时地添加到已存在的列族中。 Table 7. 列族 <code>anchor</code> | 行键 | 时间戳 | 列族anchor | | ——— | ——– | —–: | | “com.cnn.www” | t9 | anchor:cnnsi.com = “CNN” | | “com.cnn.www” | t8 | anchor:my.look.ca = “CNN.com” |</p>
-Table 8. 列族 <code>contents</code> | 行键 | 时间戳 | 列族contents | | ——— | ——– | —–: | | “com.cnn.www” | t6 | contents:html = &quot;
+<p>尽管在概念层次，表可能看起来是由一些列稀疏的行组成，但他们是通过列族来存储的。一个新建的限定符(column_family:column_qualifier)可以随时地添加到已存在的列族中。 <em>Table 7. 列族 <code>anchor</code></em></p>
+<table>
+<thead>
+<tr class="header">
+<th>行键</th>
+<th>时间戳</th>
+<th style="text-align: right;">列族anchor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>“com.cnn.www”</td>
+<td>t9</td>
+<td style="text-align: right;">anchor:cnnsi.com = “CNN”</td>
+</tr>
+<tr class="even">
+<td>“com.cnn.www”</td>
+<td>t8</td>
+<td style="text-align: right;">anchor:my.look.ca = “CNN.com”</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 8. 列族 <code>contents</code></em></p>
+<table>
+<thead>
+<tr class="header">
+<th>行键</th>
+<th>时间戳</th>
+<th style="text-align: right;">列族contents</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+| “com.cnn.www” | t6 | contents:html = &quot;
 <html>
 …​&quot; | | “com.cnn.www” | t5 | contents:html = &quot;
 <html>
@@ -541,14 +577,14 @@ Table 8. 列族 <code>contents</code> | 行键 | 时间戳 | 列族contents | | 
 <h3 id="命名空间管理">命名空间管理</h3>
 <p>命名空间可以被创建、移除和修改。命名空间关系的指定是在创建表格通过指定一个完全限定表名的形式完成的：</p>
 <!--￼1-->
-<p>Example 7. Examples <!--￼2--></p>
+<p><em>Example 7. Examples</em> <!--￼2--></p>
 <h3 id="预定义命名空间">预定义命名空间</h3>
 <p>有两种预定义的特殊的命名空间</p>
 <ul>
 <li>hbase – 系统命名空间, 用于包含HBase内部表</li>
 <li>default – 没有明确指定命名空间的表将会自动落入这个命名空间</li>
 </ul>
-<p>Example 8. Examples <!--￼3--></p>
+<p><em>Example 8. Examples</em> <!--￼3--></p>
 <h2 id="表">表</h2>
 <p>在Schema（模式）定义时预先声明表。</p>
 <h2 id="行">行</h2>
@@ -628,7 +664,7 @@ Table 8. 列族 <code>contents</code> | 行键 | 时间戳 | 列族contents | | 
 <p>删除通过创建一个墓碑标签来工作的。例如，让我们来设想我们要删除一个行。为此你可指定一个版本，或者使用默认的currentTimeMillis 。这就是删除小于等于该版本的所有单元。HBase不会修改数据，例如删除操作将不会立刻删除满足删除条件的文件。相反的，称为墓碑的会被写入，用来掩饰被删除的数据。当HBase执行一个压缩操作，墓碑将会执行一个真正地删除死亡值和墓碑自己的删除操作。如果你的删除操作指定的版本大于目前所有的版本，那么可以认为是删除整个行的数据。</p>
 <p>你可以在 <a href="http://comments.gmane.org/gmane.comp.java.hadoop.hbase.user/28421" target="_blank" rel="noopener">Put w/timestamp → Deleteall → Put w/ timestamp fails</a> 用户邮件列表中查看关于删除和版本之间的相互影响的有益信息。</p>
 <p>keyvalue也可以到<a href="http://hbase.apache.org/book.html#keyvalue" target="_blank" rel="noopener">keyvalue</a> 查看更多关于内部KeyValue格式的信息。</p>
-<p>删除标签会在下一次仓库压缩操作中被清理掉，除非为列族设置了 KEEP_DELETED_CELLS (查看 <a href="http://hbase.apache.org/book.html#cf.keep.deleted" target="_blank" rel="noopener">Keeping Deleted Cells</a>)。为了保证删除时间的可配置性，你可以通过在 <em>hbase-site.xml</em>.中hbase.hstore.time.to.purge.deletes属性来设置TTL（生存时间）。如果 hbase.hstore.time.to.purge.deletes没有设置或者设置为0，所有的删除标签包括哪些墓碑都会在下一次精简操作中被干掉。此外，未来带有时间戳的删除标签将会保持到发生在hbase.hstore.time.to.purge.deletes加上代表标签的时间戳的时间和的下一次精简操作。</p>
+<p>删除标签会在下一次仓库压缩操作中被清理掉，除非为列族设置了 KEEP_DELETED_CELLS (查看 <a href="http://hbase.apache.org/book.html#cf.keep.deleted" target="_blank" rel="noopener">Keeping Deleted Cells</a>)。为了保证删除时间的可配置性，你可以通过在 <em>hbase-site.xml</em> 。中hbase.hstore.time.to.purge.deletes属性来设置TTL（生存时间）。如果 hbase.hstore.time.to.purge.deletes没有设置或者设置为0，所有的删除标签包括哪些墓碑都会在下一次精简操作中被干掉。此外，未来带有时间戳的删除标签将会保持到发生在hbase.hstore.time.to.purge.deletes加上代表标签的时间戳的时间和的下一次精简操作。</p>
 <blockquote>
 <p>This behavior represents a fix for an unexpected change that was introduced in HBase 0.94, and was fixed in <a href="https://issues.apache.org/jira/browse/HBASE-10118" target="_blank" rel="noopener">HBASE-10118</a>. The change has been backported to HBase 0.94 and newer branches.</p>
 </blockquote>
@@ -655,6 +691,15 @@ Table 8. 列族 <code>contents</code> | 行键 | 时间戳 | 列族contents | | 
     
     
     <div>
+        
+            <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+        
+    </div>
+    <div>
       
         
 <div class="my_post_copyright">
@@ -666,7 +711,7 @@ Table 8. 列族 <code>contents</code> | 行键 | 时间戳 | 列族contents | | 
   <p><span>本文标题:</span><a href="/hbase-001-data-model.html">Apache HBase ™ Reference Guide：Hbase官方指南3.0（一）「数据模型」</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 一打鹏 的个人博客">一打鹏</a></p>
   <p><span>发布时间:</span>2018年09月17日 - 13:09</p>
-  <p><span>最后更新:</span>2018年09月17日 - 17:09</p>
+  <p><span>最后更新:</span>2018年09月17日 - 18:09</p>
   <p><span>原始链接:</span><a href="/hbase-001-data-model.html" title="Apache HBase ™ Reference Guide：Hbase官方指南3.0（一）「数据模型」">https://peniridis.github.io/hbase-001-data-model.html</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://peniridis.github.io/hbase-001-data-model.html"  aria-label="复制成功！"></i></span>
   </p>
@@ -687,15 +732,6 @@ Table 8. 列族 <code>contents</code> | 行键 | 时间戳 | 列族contents | | 
 </script>
 
       
-    </div>
-    <div>
-        
-            <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
-    
-</div>
-        
     </div>
     
 
@@ -931,7 +967,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据模型"><span class="nav-number">1.</span> <span class="nav-text">数据模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念视图"><span class="nav-number">1.1.</span> <span class="nav-text">概念视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物理视图"><span class="nav-number">1.2.</span> <span class="nav-text">物理视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名空间"><span class="nav-number">1.3.</span> <span class="nav-text">命名空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命名空间管理"><span class="nav-number">1.3.1.</span> <span class="nav-text">命名空间管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预定义命名空间"><span class="nav-number">1.3.2.</span> <span class="nav-text">预定义命名空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表"><span class="nav-number">1.4.</span> <span class="nav-text">表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行"><span class="nav-number">1.5.</span> <span class="nav-text">行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列族"><span class="nav-number">1.6.</span> <span class="nav-text">列族</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单元"><span class="nav-number">1.7.</span> <span class="nav-text">单元</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据模型操作"><span class="nav-number">1.8.</span> <span class="nav-text">数据模型操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#get"><span class="nav-number">1.8.1.</span> <span class="nav-text">Get</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#put"><span class="nav-number">1.8.2.</span> <span class="nav-text">Put</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scans"><span class="nav-number">1.8.3.</span> <span class="nav-text">Scans</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#delete"><span class="nav-number">1.8.4.</span> <span class="nav-text">Delete</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本"><span class="nav-number">1.9.</span> <span class="nav-text">版本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#指定版本的存储数量"><span class="nav-number">1.9.1.</span> <span class="nav-text">指定版本的存储数量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本和hbase-操作"><span class="nav-number">1.9.2.</span> <span class="nav-text">版本和HBase 操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#默认的get-例子"><span class="nav-number">1.9.2.1.</span> <span class="nav-text">默认的Get 例子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#get版本的例"><span class="nav-number">1.9.2.2.</span> <span class="nav-text">Get版本的例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#put-1"><span class="nav-number">1.9.2.3.</span> <span class="nav-text">Put</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#delete-1"><span class="nav-number">1.9.2.4.</span> <span class="nav-text">Delete</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#当前的局限性"><span class="nav-number">1.9.3.</span> <span class="nav-text">当前的局限性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#deletes-mask-puts删除覆盖插入更新"><span class="nav-number">1.9.3.1.</span> <span class="nav-text">Deletes mask Puts删除覆盖插入/更新</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序次序"><span class="nav-number">1.10.</span> <span class="nav-text">排序次序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列元数据"><span class="nav-number">1.11.</span> <span class="nav-text">列元数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#joins"><span class="nav-number">1.12.</span> <span class="nav-text">Joins</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#acid"><span class="nav-number">1.13.</span> <span class="nav-text">ACID</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据模型"><span class="nav-number">1.</span> <span class="nav-text">数据模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概念视图"><span class="nav-number">2.</span> <span class="nav-text">概念视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物理视图"><span class="nav-number">3.</span> <span class="nav-text">物理视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名空间"><span class="nav-number">4.</span> <span class="nav-text">命名空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命名空间管理"><span class="nav-number">4.1.</span> <span class="nav-text">命名空间管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预定义命名空间"><span class="nav-number">4.2.</span> <span class="nav-text">预定义命名空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表"><span class="nav-number">5.</span> <span class="nav-text">表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行"><span class="nav-number">6.</span> <span class="nav-text">行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列族"><span class="nav-number">7.</span> <span class="nav-text">列族</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单元"><span class="nav-number">8.</span> <span class="nav-text">单元</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据模型操作"><span class="nav-number">9.</span> <span class="nav-text">数据模型操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#get"><span class="nav-number">9.1.</span> <span class="nav-text">Get</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#put"><span class="nav-number">9.2.</span> <span class="nav-text">Put</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scans"><span class="nav-number">9.3.</span> <span class="nav-text">Scans</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#delete"><span class="nav-number">9.4.</span> <span class="nav-text">Delete</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本"><span class="nav-number">10.</span> <span class="nav-text">版本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#指定版本的存储数量"><span class="nav-number">10.1.</span> <span class="nav-text">指定版本的存储数量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本和hbase-操作"><span class="nav-number">10.2.</span> <span class="nav-text">版本和HBase 操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#默认的get-例子"><span class="nav-number">10.2.1.</span> <span class="nav-text">默认的Get 例子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#get版本的例"><span class="nav-number">10.2.2.</span> <span class="nav-text">Get版本的例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#put-1"><span class="nav-number">10.2.3.</span> <span class="nav-text">Put</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#delete-1"><span class="nav-number">10.2.4.</span> <span class="nav-text">Delete</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#当前的局限性"><span class="nav-number">10.3.</span> <span class="nav-text">当前的局限性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#deletes-mask-puts删除覆盖插入更新"><span class="nav-number">10.3.1.</span> <span class="nav-text">Deletes mask Puts删除覆盖插入/更新</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序次序"><span class="nav-number">11.</span> <span class="nav-text">排序次序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列元数据"><span class="nav-number">12.</span> <span class="nav-text">列元数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#joins"><span class="nav-number">13.</span> <span class="nav-text">Joins</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#acid"><span class="nav-number">14.</span> <span class="nav-text">ACID</span></a></li></ol></div>
             
 
           </div>
