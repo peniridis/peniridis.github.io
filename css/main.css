@@ -227,43 +227,43 @@ h6 {
   margin: 20px 0 15px;
 }
 h1 {
-  font-size: 27px;
+  font-size: 22px;
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: 23px;
+    font-size: 18px;
   }
 }
 h2 {
-  font-size: 24px;
+  font-size: 20px;
 }
 @media (max-width: 767px) {
   h2 {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 h3 {
-  font-size: 21px;
-}
-@media (max-width: 767px) {
-  h3 {
-    font-size: 17px;
-  }
-}
-h4 {
   font-size: 18px;
 }
 @media (max-width: 767px) {
-  h4 {
+  h3 {
     font-size: 14px;
   }
 }
+h4 {
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  h4 {
+    font-size: 12px;
+  }
+}
 h5 {
-  font-size: 15px;
+  font-size: 14px;
 }
 @media (max-width: 767px) {
   h5 {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
 h6 {
@@ -445,16 +445,16 @@ body {
 .header-inner {
   margin: 0 auto;
   padding: 100px 0 70px;
-  width: calc(100% - 352px);
+  width: 97.7%;
 }
 @media (min-width: 1200px) {
   .container .header-inner {
-    width: 1160px;
+    width: 97.7%;
   }
 }
 @media (min-width: 1600px) {
   .container .header-inner {
-    width: 73%;
+    width: 97.7%;
   }
 }
 .main {
@@ -462,16 +462,16 @@ body {
 }
 .main-inner {
   margin: 0 auto;
-  width: calc(100% - 352px);
+  width: 97.7%;
 }
 @media (min-width: 1200px) {
   .container .main-inner {
-    width: 1160px;
+    width: 97.7%;
   }
 }
 @media (min-width: 1600px) {
   .container .main-inner {
-    width: 73%;
+    width: 97.7%;
   }
 }
 .footer {
@@ -484,16 +484,16 @@ body {
 .footer-inner {
   box-sizing: border-box;
   margin: 20px auto;
-  width: calc(100% - 352px);
+  width: 97.7%;
 }
 @media (min-width: 1200px) {
   .container .footer-inner {
-    width: 1160px;
+    width: 97.7%;
   }
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
-    width: 73%;
+    width: 97.7%;
   }
 }
 pre,
@@ -1839,7 +1839,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3d3766;
+  background: #14a1d4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2479,16 +2479,16 @@ ul.breadcrumb li+li:last-child {
 .header {
   position: relative;
   margin: 0 auto;
-  width: calc(100% - 352px);
+  width: 97.7%;
 }
 @media (min-width: 1200px) {
   .header {
-    width: 1160px;
+    width: 97.7%;
   }
 }
 @media (min-width: 1600px) {
   .header {
-    width: 73%;
+    width: 97.7%;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
