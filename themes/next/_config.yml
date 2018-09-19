@@ -136,10 +136,10 @@ menu_settings:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -288,7 +288,7 @@ post_meta:
 symbols_count_time:
   separated_meta: true
   item_text_post: true
-  item_text_total: false
+  item_text_total: true
   awl: 4
   wpm: 275
 
@@ -380,6 +380,7 @@ cheers_enabled: true
 # To avoid space between header and sidebar in Pisces / Gemini themes recommended to use Web Safe fonts for `global` (and `logo`):
 # Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
 # ---------------------------------------------------------------
+sidebar_width: 350
 font:
   enable: false
 
@@ -401,7 +402,7 @@ font:
   # Fallback to `global` font settings.
   headings:
     external: true
-    family:
+    family: Georgia
     size:
 
   # Font settings for posts.
@@ -414,7 +415,7 @@ font:
   # Fallback to `global` font settings.
   logo:
     external: true
-    family:
+    family: Monda
     size:
 
   # Font settings for <code> and code blocks.
