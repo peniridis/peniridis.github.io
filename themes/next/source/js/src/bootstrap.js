@@ -1,7 +1,16 @@
 /* global NexT, CONFIG */
 
 $(document).ready(function() {
-
+  var backgroundImgUrls = [
+    "https://i.loli.net/2018/09/21/5ba44c011bc55.jpg"
+  ];
+  var randomIndex = Math.floor(Math.random() * (backgroundImgUrls.length + 1));
+  if (randomIndex == backgroundImgUrls.length) {
+    $("body").css({"background-color":"white"});
+  } else {
+    var background_image = "url(" + backgroundImgUrls[randomIndex] + ")";
+    $("body").css({"background":background_image, "background-attachment":"fixed", "background-size":"cover"});
+  }
   $(document).trigger('bootstrap:before');
 
   /**

@@ -395,6 +395,16 @@ keyvalue也可以到[keyvalue](http://hbase.apache.org/book.html#keyvalue) 查�
 
 > This behavior represents a fix for an unexpected change that was introduced in HBase 0.94, and was fixed in [HBASE-10118](https://issues.apache.org/jira/browse/HBASE-10118). The change has been backported to HBase 0.94 and newer branches.
 
+### Optional New Version and Delete behavior in HBase-2.0.0
+
+In `hbase-2.0.0`, the operator can specify an alternate version and delete treatment by setting the column descriptor property`NEW_VERSION_BEHAVIOR` to true (To set a property on a column family descriptor, you must first disable the table and then alter the column family descriptor; see [Keeping Deleted Cells](https://hbase.apache.org/book.html#cf.keep.deleted) for an example of editing an attribute on a column family descriptor).
+
+The 'new version behavior', undoes the limitations listed below whereby a `Delete` ALWAYS overshadows a `Put` if at the same location — i.e. same row, column family, qualifier and timestamp — regardless of which arrived first. Version accounting is also changed as deleted versions are considered toward total version count. This is done to ensure results are not changed should a major compaction intercede. See `HBASE-15968` and linked issues for discussion.
+
+Running with this new configuration currently costs; we factor the Cell MVCC on every compare so we burn more CPU. The slow down will depend. In testing we’ve seen between 0% and 25% degradation.
+
+If replicating, it is advised that you run with the new serial replication feature (See `HBASE-9465`; the serial replication feature did NOT make it into `hbase-2.0.0` but should arrive in a subsequent hbase-2.x release) as now the order in which Mutations arrive is a factor.
+
 ### 当前的局限性
 #### Deletes mask Puts删除覆盖插入/更新
 删除操作覆盖插入/更新操作，即使put在delete之后执行的。可以查看 [HBASE-2256](https://issues.apache.org/jira/browse/HBASE-2256). 还记得一个删除写入一个墓碑，只有当下一次精简操作发生时才会执行真正地删除操作。假设你执行了一个删除全部小于等于T的操作。在此之外又做了一个时间戳为T的put操作。这个put操作即使是发生在delete之后，也会被delete墓碑所覆盖。执行put的时候不会报错，不过当你执行一个get的时候会发现执行无效。你会在精简操作之后重新开始工作。如果你在put的使用的递增的版本，那么这些问题将不会出现。但如果你不在意时间，在执行delelte后立刻执行put的话，那么它们将有可能发生在同一时间点，这将会导致上述问题的出现。

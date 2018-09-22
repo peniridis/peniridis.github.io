@@ -439,16 +439,16 @@ math:
   per_page: true
 
   engine: mathjax
-  #engine: katex
+#  engine: katex
 
   # hexo-rendering-pandoc (or hexo-renderer-kramed) needed to full MathJax support.
   mathjax:
     # Use 2.7.1 as default, jsdelivr as default CDN, works everywhere even in China
-    cdn: //cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#    cdn: //cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
     # For newMathJax CDN (cdnjs.cloudflare.com) with fallback to oldMathJax (cdn.mathjax.org).
     #cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
     # For direct link to MathJax.js with CloudFlare CDN (cdnjs.cloudflare.com).
-    #cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML
+    cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML
     # For automatic detect latest version link to MathJax.js and get from Bootcss.
     #cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
@@ -805,7 +805,7 @@ lazyload: false
 
 # Progress bar in the top during page loading.
 # Dependencies: https://github.com/theme-next/theme-next-pace
-pace: false
+pace: true
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce
@@ -822,7 +822,7 @@ pace: false
 #pace-theme-minimal
 # For example
 # pace_theme: pace-theme-center-simple
-pace_theme: pace-theme-minimal
+pace_theme: pace-theme-center-circle
 
 # Canvas-nest
 # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
@@ -860,7 +860,7 @@ vendors:
   _internal: lib
 
   # Internal version: 2.1.3
-  jquery:
+  jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js
 
   # Internal version: 2.1.5
   # See: http://fancyapps.com/fancybox/
@@ -869,27 +869,27 @@ vendors:
 
   # Internal version: 1.0.6
   # See: https://github.com/ftlabs/fastclick
-  fastclick:
+  fastclick: https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js
 
   # Internal version: 1.9.7
   # See: https://github.com/tuupola/jquery_lazyload
-  lazyload:
+  lazyload: https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js
 
   # Internal version: 1.2.1
   # See: http://VelocityJS.org
-  velocity:
+  velocity: https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js
 
   # Internal version: 1.2.1
   # See: http://VelocityJS.org
-  velocity_ui:
+  velocity_ui: https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js
 
   # Internal version: 0.7.9
   # See: https://faisalman.github.io/ua-parser-js/
-  ua_parser:
+  ua_parser: https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.9/ua-parser.min.js
 
   # Internal version: 4.6.2
   # See: http://fontawesome.io/
-  fontawesome:
+  fontawesome: https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css
 
   # Internal version: 1
   # https://www.algolia.com
@@ -901,8 +901,8 @@ vendors:
   # Or use direct links below:
   # pace: //cdn.bootcss.com/pace/1.0.2/pace.min.js
   # pace_css: //cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css
-  pace:
-  pace_css:
+  pace: //cdn.bootcss.com/pace/1.0.2/pace.min.js
+  pace_css: //cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css
 
   # Internal version: 1.0.0
   # https://github.com/hustcc/canvas-nest.js

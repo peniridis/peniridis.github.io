@@ -15,16 +15,16 @@
     "hexo-generator-searchdb": "^1.0.8",
     "hexo-generator-tag": "^0.2.0",
     "hexo-inject": "^1.0.0",
-    "hexo-math": "^3.0.4",
     "hexo-neat": "^1.0.4",
     "hexo-renderer-ejs": "^0.3.1",
     "hexo-renderer-jade": "^0.4.1",
-    "hexo-renderer-kramed": "^0.1.4",
+    "hexo-renderer-pandoc": "^0.2.3",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.1",
     "hexo-symbols-count-time": "^0.4.4",
     "hexo-wordcount": "^6.0.1",
     "jsdom": "^12.0.0",
+    "markdown-it-katex": "^2.0.3",
     "mathjax-node-page": "^3.0.1"
   }
 }
