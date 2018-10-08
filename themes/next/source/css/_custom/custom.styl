@@ -4,42 +4,53 @@
 [class$="page-post-detail"] #footer, .page-archive {
   background: rgba(255, 255, 255, 0.83);
 }
+
 [class="container sidebar-position-left "] .main,
 [class$="sidebar-position-left"] #footer, .page-archive .main {
   background: transparent;
 }
+
 .pagination, .post-block, .comments,
 .container .header-inner, .sidebar-inner {
   background: rgba(255, 255, 255, 0.45);
 }
+
 // 归档
 #sidebar {
   background: rgba(255, 255, 255, 0);
 }
+
 .menu .menu-item a:hover {
-  background: #2222223b;
+  background: #222222 3 b;
   border-bottom-color: transparent;
 }
+
 .menu-item-active a {
   background: #fbcb3fbd;
   border-bottom-color: transparent;
 }
+
 .tabs ul.nav-tabs li.tab.active,
 .tabs .tab-content {
   background-color: rgba(255, 255, 255, 0.62) !important;
 }
+
 .gitment-editor-body textarea {
-  background-color: #ffffff9e!important;
+  background-color: #ffffff9e !important;
 }
+
 .gitment-editor-preview-field {
-  background-color: #ffffff40!important;
+  background-color: #ffffff40 !important;
 }
+
 .gitment-comment-header {
-  background-color: transparent!important;
+  background-color: transparent !important;
 }
+
 #gitment-container a {
   border-bottom: none;
 }
+
 /* 侧边栏 */
 // 普通状态下的超链接状态
 .post-toc ol a {
@@ -48,15 +59,17 @@
     border-bottom-color: #666;
   }
 }
+
 // active状态下的超链接样式
-.post-toc .nav li[class$="active"]>.nav-link {
+.post-toc .nav li[class$="active"] > .nav-link {
   border-bottom-color: transparent;
   &:hover {
     border-bottom-color: #fc6423;
   }
 }
+
 // 当前正在访问的超链接样式
-.post-toc .nav li[class$="active-current"]>.nav-link {
+.post-toc .nav li[class$="active-current"] > .nav-link {
   color: white;
   background: #337ab7;
   border-radius: 3.6px;
@@ -68,33 +81,42 @@
     color: black;
   }
 }
+
 .site-state-item {
   border-left: 1px solid #b1b1b1;
 }
+
 // 各级目录的显示宽度 - 主要是为了不让边框超出侧边栏
 .post-toc .nav .active-current.nav-level-2 a {
   width: 303px;
 }
+
 .post-toc .nav .active-current.nav-level-3 a {
   width: 296px;
 }
+
 .post-toc .nav .active-current.nav-level-4 a {
   width: 286px;
 }
+
 .post-toc .nav .active-current.nav-level-5 a {
   width: 276px;
 }
+
 .post-toc .nav .active-current.nav-level-6 a {
   width: 266px;
 }
+
 .post-toc {
   width: calc(100% + 17px);
 }
+
 /* 标题 */
 // 点进文章，文章的主标题
 .posts-expand article:only-of-type h1 {
   font-size: 37px;
 }
+
 // 二级标题(正常显示器分辨率)
 // 其实要在左下角和右下角加上一个折角、翻折的效果（一个三角形）
 .post-body h2 {
@@ -107,30 +129,35 @@
   padding-left: 1.7%;
   position: relative;
   background-color: #ecf6f7;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
+
 // 二级标题(移动终端分辨率)
 @media (min-width: 768px) and (max-width: 991px) {
   .main .post-body h2 {
     margin: 20px -23px 15px -28px;
   }
 }
+
 @media (max-width: 767px) {
   .main .post-body h2 {
     margin: 20px -15px 15px -18px;
   }
 }
+
 // 三级标题
 .post-body h3 {
-  border-bottom: 1px solid #cfd8dc!important;
+  border-bottom: 1px solid #cfd8dc !important;
   padding-bottom: 0.3em;
 }
+
 /* 文章页面内的各种元素 */
 // note块元素
 .post-body .note {
   border-color: #ddd;
   background-color: #f9f9f980;
 }
+
 // 文章内的普通超链接
 .post-body a {
   color: #0593d3;
@@ -139,6 +166,7 @@
     color: #FF4500;
   }
 }
+
 //代码块内的超链接
 .post-body a code {
   color: #0593d3;
@@ -147,6 +175,7 @@
     color: #FF4500;
   }
 }
+
 // 分页导航（上/下一篇文章的超链接）
 .post-nav-item a {
   color: #0593d3;
@@ -155,23 +184,28 @@
     color: #FF4500;
   }
 }
+
 // 阅读全文按钮的超链接
 .post-button .btn {
   border-bottom: 2px solid #555;
 }
+
 // 无序列表
 .posts-expand .post-body ul li {
   list-style: disc;
 }
+
 // 有序列表
 .posts-expand .post-body ol {
   counter-reset: counter;
 }
-.posts-expand .post-body ol>li {
+
+.posts-expand .post-body ol > li {
   list-style-type: none;
   position: relative;
 }
-.posts-expand .post-body ol>li:before {
+
+.posts-expand .post-body ol > li:before {
   counter-increment: counter;
   content: counter(counter);
   background: #49b1f5; //#929ca2;
@@ -188,6 +222,7 @@
   left: -27px;
   top: 5px;
 }
+
 // fancybox图片
 .posts-expand .post-body .fancybox img {
   display: block !important;
@@ -196,10 +231,12 @@
   cursor: zoom-in;
   cursor: -webkit-zoom-in;
 }
+
 // 图片底下的描述性文字
 .post-body .image-caption, .post-body .figure .caption {
   text-align: left;
 }
+
 // label块
 .post-body .label {
   font-weight: bold;
@@ -207,67 +244,83 @@
   margin: 0px 3px 0px 3px;
   padding: 3px 4px;
 }
+
 .post-body .label.primary {
   background-color: #ecd6ff;
 }
+
 .post-body .label.info {
   background-color: #c3e8f9;
 }
+
 .post-body .label.success {
   background-color: #b2eabb;
 }
+
 .post-body .label.default {
   background-color: #dcdcdc;
 }
+
 .post-body .label.warning {
   background-color: #ffe89a;
 }
+
 .post-body .label.danger {
   background-color: #f9c1ca;
 }
+
 // 代码区
 .highlight .code pre {
   background-color: transparent;
 }
+
 .highlight {
   background-color: #f9f9f980;
   border: 1px solid #ddd;
   border-radius: 2px;
 }
+
 // 原样输出的代码块
 pre {
   background: #f9f9f980;
   border: 1px solid #ddd;
   border-radius: 2px;
 }
+
 pre code {
   border: transparent;
 }
+
 // 块引用
 blockquote {
   background-color: #f9f9f980;
   border-left-color: #6b8afb;
 }
+
 // 表格奇数行
-.highlight table>tbody>tr {
+.highlight table > tbody > tr {
   &:nth-of-type(odd) {
     background-color: transparent;
   }
 }
+
 // 表格每一行鼠标经过时的颜色
-table>tbody>tr {
+table > tbody > tr {
   &:hover {
     background-color: #FFFFF0;
   }
 }
+
 // 表格的单元格
 table td, table th {
   border-right: 1px solid #dcdcdc;
 }
+
 // 侧边栏头部
 .site-meta {
   background: #0072E3;
 }
+
 // 文章底部的标签
 .posts-expand .post-tags a {
   background: #e6e6e6;
@@ -280,6 +333,7 @@ table td, table th {
     background: #2ca6cb;
   }
 }
+
 // 分割线
 hr {
   margin: 0px 0px 0px 0px;
@@ -287,28 +341,43 @@ hr {
   border: none;
   background-image: none;
 }
+
 // code代码块
 code {
   background: #dcdcdc;
   margin: 0 2px 0 2px;
 }
+
 // 选项卡被选中的那一项
 .tabs ul.nav-tabs li.tab.active a {
   font-size: 19px;
 }
+
 // 浏览器滚动条
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #49b1f5;
 }
+
 ::-webkit-scrollbar-track {
   background-color: transparent;
 }
+
 .page-archive #footer {
   position: inherit;
   height: 1px;
   padding-bottom: 1.9%;
+}
+
+// 自定义的侧栏时间样式
+#days {
+  display: block;
+  color: rgb(7, 179, 155);
+  font-size: 13px;
+  margin-top: 15px;
+  text-align: center;
 }
