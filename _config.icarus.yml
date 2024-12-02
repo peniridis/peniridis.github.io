@@ -1,0 +1,98 @@
+version: 5.1.0
+variant: cyberpunk
+logo: https://gitee.com/cnhuashao/picgo-images/raw/master/20210902174326.png
+head:
+    favicon: https://gitee.com/cnhuashao/picgo-images/raw/master/20210831154758.png
+    manifest:
+        name: StuartRoc
+        short_name: roc
+        start_url: https://blog.cnhuashao.com
+        theme_color: 
+        background_color: 
+        display: standalone
+        icons:
+            -
+                src: ''
+                sizes: ''
+                type: 
+article:
+    highlight:
+        theme: xt256
+        readtime: true
+        clipboard: true
+navbar:
+    menu:
+        首页: /
+        文章归档: /archives
+        分类: /categories
+        标签: /tags
+        个人简介: /about
+        留言: /message
+        音乐: /music
+        媒体: /media
+    links:
+        Gitee:
+            icon: fab fa-git-square
+            url: https://gitee.com/cnhuashao
+providers:
+    cdn: loli
+    fontcdn: loli
+    iconcdn: loli
+sidebar:
+    left:
+        sticky: true
+    right:
+        sticky: true
+footer:
+    links:
+        知识共享:
+            icon: fab fa-creative-commons
+            url: https://creativecommons.org/
+        CC BY-NC 4.0:
+            icon: fab fa-creative-commons-by
+            url: https://creativecommons.org/licenses/by-nc/4.0/deed.zh
+        Download on Gitee:
+            icon: fab fa-git-square
+            url: https://gitee.com/cnhuashao
+widgets:
+    -
+        position: left
+        type: profile
+        author: StuartRoc
+        author_title: A GitHub Octocat
+        location: GitHub Inc.
+        avatar: https://octodex.github.com/images/hula_loop_octodex03.gif
+        avatar_rounded: true
+        gravatar: 
+        follow_link: https://pengtech.net
+        social_links:
+            Github:
+                icon: fab fa-github
+                url: https://github.com/guoapeng
+    -
+        position: right
+        type: toc
+        index: true
+        collapsed: true
+        depth: 3
+    -
+        position: left
+        type: links
+        links:
+            pengtech: https://pengtech.net
+            philoenglish: https://philoenglish.com
+    -
+        position: right
+        type: tags
+        order_by: name
+        amount: 20
+        show_count: true
+    -
+        position: right
+        type: recent_posts
+    -
+        position: right
+        type: archives
+    -
+        position: right
+        type: categories

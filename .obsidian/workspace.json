@@ -1,0 +1,185 @@
+{
+  "main": {
+    "id": "1b735da4a917278b",
+    "type": "split",
+    "children": [
+      {
+        "id": "e07bd059d0ecdcb0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "208be89f24119857",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/AI/大模型/Embedding.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1364c5b5f1119097",
+    "type": "split",
+    "children": [
+      {
+        "id": "6247d4d4693686ea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "be54d351587fc1b0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "36e9f37394d94531",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6719699f07ad766d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "92dfe7885ac7f51e",
+    "type": "split",
+    "children": [
+      {
+        "id": "160c2242e707ba5d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c2f3da4bf8137ac",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "source/_posts/AI/大模型/Embedding.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8e8a8d9485c767a7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "source/_posts/AI/大模型/Embedding.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fe92c6aa3c261177",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1fef427e68011a4a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "source/_posts/AI/大模型/Embedding.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "208be89f24119857",
+  "lastOpenFiles": [
+    "_config.icarus.yml.example",
+    "_config.icarus.yml.fc803e80982ed5b3b00927ce402db164",
+    "public/js/main.js",
+    "public/js/back_to_top.js",
+    "public/js/jquery-3.6.4.min.js",
+    "public/js/animation.js",
+    "public/js/pjax.js",
+    "public/js/column.js",
+    "public/2024/11/5b8ceb233cf9.html",
+    "public/js/script.js",
+    "public/categories/AI/index.html",
+    "public/img/razor-bottom-black.svg",
+    "public/img/logo.svg",
+    "public/img/og_image.png",
+    "public/img/favicon.svg",
+    "public/img/avatar.png",
+    "public/css/images/banner.jpg",
+    "public/img/razor-top-black.svg",
+    "node_modules/luxon/README.md",
+    "node_modules/luxon/LICENSE.md",
+    "node_modules/hexo-deployer-git/node_modules/dom-serializer/node_modules/entities/readme.md",
+    "node_modules/hexo-deployer-git/node_modules/domutils/readme.md",
+    "node_modules/hexo-deployer-git/node_modules/domhandler/readme.md",
+    "node_modules/hexo-deployer-git/node_modules/dom-serializer/README.md",
+    "source/_posts/hello-world.md",
+    "source/_posts/AI/大模型/Embedding.md",
+    "source/_posts/AI/Embedding.md",
+    "themes/hexo-theme-icarus/source/img/razor-top-black.svg",
+    "themes/hexo-theme-icarus/source/img/og_image.png",
+    "themes/hexo-theme-icarus/source/img/razor-bottom-black.svg",
+    "themes/hexo-theme-icarus/node_modules/semver/README.md",
+    "themes/hexo-theme-icarus/README.md",
+    "themes/hexo-theme-icarus/CONTRIBUTING.md"
+  ]
+}

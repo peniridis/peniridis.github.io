@@ -1,0 +1,145 @@
+version: 5.0.0
+variant: cyberpunk
+# 顶部logo 设置你站点的logo。 此logo会显示在导航栏和页脚。 图片或者是文字
+logo: https://gitee.com/cnhuashao/picgo-images/raw/master/20210902174326.png
+# Article related configurations
+# 页面元数据配置
+head:
+    # 浏览器图标
+    favicon: https://gitee.com/cnhuashao/picgo-images/raw/master/20210831154758.png
+    # Web应用程序清单配置 Icarus支持基本的PWAmanifest.json的生成与Meta标签
+    # https://developer.mozilla.org/en-US/docs/Web/Manifest
+    manifest:
+        # web应用程序的名称(默认为站点标题)
+        name: StuartRoc
+        # 显示的web应用程序名称
+        # 当没有足够的空间显示全名时
+        short_name: roc
+        # web应用程序的起始URL
+        start_url: https://blog.cnhuashao.com
+        # 应用程序的默认主题颜色
+        theme_color: 
+        # 在加载样式表之前，要显示的应用程序页面的占位符背景颜色
+        background_color: 
+        # 网站的首选显示模式
+        display: standalone
+        # 可以作为不同上下文的应用程序图标的图像文件
+        icons:
+            -
+                # 映像文件的路径
+                src: ''
+                # 包含空格分隔的图像维数的字符串
+                sizes: ''
+                # 关于图像的媒体类型的提示
+                type: 
+    # 打开图元数据
+    # https://hexo.io/docs/helpers.html#open-graph
+article:
+    highlight:
+        # theme: atom-one-light
+        theme: xt256
+        # 显示文章字数统计以及预计阅读时间。
+        readtime: true
+        # 显示复制代码按钮
+        clipboard: true
+# 页面顶部导航栏配置
+navbar:
+    # 导航菜单项
+    menu:
+        首页: /
+        文章归档: /archives
+        分类: /categories
+        标签: /tags
+        个人简介: /about
+        留言: /message
+        音乐: /music
+        媒体: /media
+    # 导航右侧快捷方式
+    links:
+        Gitee:
+            icon: fab fa-git-square
+            url: 'https://gitee.com/cnhuashao'        
+providers:
+    # Name or URL template of the JavaScript and/or stylesheet CDN provider
+    cdn: loli
+    # Name or URL template of the webfont CDN provider
+    #默认用的google
+    fontcdn: loli
+    # Name or URL of the fontawesome icon font CDN provider
+    iconcdn: loli
+sidebar:
+    # 左栏的配置
+    left:
+        # 当页面滚动时左侧侧边栏是否停留在顶部
+        sticky: true
+    # Right sidebar configurations
+    right:
+        # Whether the sidebar sticks to the top when page scrolls
+        sticky: true
+# 页脚
+footer:
+    # 右侧超链接设置
+    links:
+        知识共享:
+            icon: fab fa-creative-commons
+            url: 'https://creativecommons.org/'
+        CC BY-NC 4.0:
+            icon: fab fa-creative-commons-by
+            url: 'https://creativecommons.org/licenses/by-nc/4.0/deed.zh'
+        Download on Gitee:
+            icon: fab fa-git-square
+            url: 'https://gitee.com/cnhuashao'
+widgets:
+  - position: left
+    type: profile
+    # 作者名称
+    author: StuartRoc
+    # 作者头衔
+    author_title: A GitHub Octocat
+    # 作者所在地/公司
+    location: GitHub Inc.
+    # 头像图片地址
+    avatar: https://octodex.github.com/images/hula_loop_octodex03.gif
+    # 是否显示圆形头像
+    avatar_rounded: true
+    # Gravatar邮箱(如不设置`avatar`项)
+    gravatar:
+    # 关注按钮链接地址
+    follow_link: "https://pengtech.net"
+    # 社交媒体链接
+    social_links:
+      Github:
+        icon: fab fa-github
+        url: "https://github.com/guoapeng"
+  - position: right
+    type: toc
+    # 是否显示每个标题的索引
+    index: true
+    # 是否在看不到副标题时折叠副标题
+    collapsed: true
+    # 标题显示的最高水平
+    depth: 3        
+  # 链接小部件配置      
+  - position: left
+    type: links
+    # 友站名称与链接
+    links:
+      pengtech: "https://pengtech.net"
+      philoenglish: "https://philoenglish.com"
+    # 标签小部件的配置
+  - position: right
+    type: tags
+    order_by: name # 可选项。按名称(name)或长度(length)来排序。加上`-`前缀来倒序排列。
+    amount: 20 # 可选项。最多显示的标签数量。留空以显示所有标签。
+    show_count: true # 可选项。是否显示标签名称右侧的文章数量。
+    # 最新文章小部件配置
+  - position: right
+    type: recent_posts
+    # 档案小部件的配置
+  - position: right
+    type: archives
+    # 分类小部件配置
+  - position: right
+    type: categories
+    # 目录 小部件配置
+
